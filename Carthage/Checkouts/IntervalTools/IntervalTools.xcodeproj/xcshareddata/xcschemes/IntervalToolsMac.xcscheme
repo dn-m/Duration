@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "071D19D01C94C93D00543F77"
-               BuildableName = "Duration.framework"
-               BlueprintName = "Duration"
-               ReferencedContainer = "container:Duration.xcodeproj">
+               BlueprintIdentifier = "079863AD1C90B16200E3950A"
+               BuildableName = "IntervalTools.framework"
+               BlueprintName = "IntervalToolsMac"
+               ReferencedContainer = "container:IntervalTools.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "071D19DA1C94C93D00543F77"
-               BuildableName = "DurationTests.xctest"
-               BlueprintName = "DurationTests"
-               ReferencedContainer = "container:Duration.xcodeproj">
+               BlueprintIdentifier = "079863B61C90B16200E3950A"
+               BuildableName = "IntervalToolsMacTests.xctest"
+               BlueprintName = "IntervalToolsMacTests"
+               ReferencedContainer = "container:IntervalTools.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "071D19D01C94C93D00543F77"
-            BuildableName = "Duration.framework"
-            BlueprintName = "Duration"
-            ReferencedContainer = "container:Duration.xcodeproj">
+            BlueprintIdentifier = "079863AD1C90B16200E3950A"
+            BuildableName = "IntervalTools.framework"
+            BlueprintName = "IntervalToolsMac"
+            ReferencedContainer = "container:IntervalTools.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -64,10 +64,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "071D19D01C94C93D00543F77"
-            BuildableName = "Duration.framework"
-            BlueprintName = "Duration"
-            ReferencedContainer = "container:Duration.xcodeproj">
+            BlueprintIdentifier = "079863AD1C90B16200E3950A"
+            BuildableName = "IntervalTools.framework"
+            BlueprintName = "IntervalToolsMac"
+            ReferencedContainer = "container:IntervalTools.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -82,10 +82,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "071D19D01C94C93D00543F77"
-            BuildableName = "Duration.framework"
-            BlueprintName = "Duration"
-            ReferencedContainer = "container:Duration.xcodeproj">
+            BlueprintIdentifier = "079863AD1C90B16200E3950A"
+            BuildableName = "IntervalTools.framework"
+            BlueprintName = "IntervalToolsMac"
+            ReferencedContainer = "container:IntervalTools.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

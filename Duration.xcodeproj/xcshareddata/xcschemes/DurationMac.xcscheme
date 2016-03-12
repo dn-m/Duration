@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "071D19F11C94C95F00543F77"
-               BuildableName = "DurationMac.framework"
+               BuildableName = "Duration.framework"
                BlueprintName = "DurationMac"
                ReferencedContainer = "container:Duration.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "071D19F11C94C95F00543F77"
-            BuildableName = "DurationMac.framework"
+            BuildableName = "Duration.framework"
             BlueprintName = "DurationMac"
             ReferencedContainer = "container:Duration.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "071D19F11C94C95F00543F77"
-            BuildableName = "DurationMac.framework"
+            BuildableName = "Duration.framework"
             BlueprintName = "DurationMac"
             ReferencedContainer = "container:Duration.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "071D19F11C94C95F00543F77"
-            BuildableName = "DurationMac.framework"
+            BuildableName = "Duration.framework"
             BlueprintName = "DurationMac"
             ReferencedContainer = "container:Duration.xcodeproj">
          </BuildableReference>
