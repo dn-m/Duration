@@ -12,7 +12,3 @@ import Foundation
  Beats in a `MetricalDuration`.
  */
 public typealias Beats = Int
-
-extension Beats {
-
-}
