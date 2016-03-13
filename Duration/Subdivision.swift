@@ -12,24 +12,14 @@ import ArithmeticTools
 /**
  Subdivision of `MetricalDuration`.
  */
-public struct Subdivision {
+
+public typealias Subdivision = Int
+
+public extension Subdivision {
     
     // MARK: - Type Methods
     
-    /**
-     Check if a value is a valid Subdivision value.
-    
-     >`isValid(value: 32) // true`
-     >`isValid(value: 42) // false`
-     
-     - parameter value: Value to be checked
-     
-     - returns: If the value is a valid Subdivision value
-     */
-    public static func isValid(value value: Int) -> Bool {
-        return value.isPowerOfTwo
-    }
-    
+    /*
     /**
     Get the Subdivision level from a Subdivision value.
     
@@ -54,14 +44,15 @@ public struct Subdivision {
     public static func valueFrom(level: Int) -> Int {
         return Int(pow(2.0, (Double(level) + 2.0)))
     }
+    */
     
     // MARK: - Instance Properties
     
     /// Power-of-two value of the subdivision (e.g., 4, 8, 16, 32, etc.).
-    public let value: Int
+    //public let value: Int
     
     /// Positive integer value analogous to the amount of beams in graphical representation.
-    public let level: Int
+    public var level: Int { return Int(log(Double(self))/log(2)) - 2 }
     
     // MARK: - Initializers
     
@@ -74,9 +65,11 @@ public struct Subdivision {
         is not greater than 0, or a power-of-two
     */
     public init?(value: Int) {
-        guard let l = Subdivision.levelFrom(value) else { return nil }
-        self.level = l
-        self.value = value
+        guard value.isPowerOfTwo else { return nil }
+        self = value
+        //guard let l = Subdivision.levelFrom(value) else { return nil }
+        //self.level = l
+        //self.value = value
     }
     
     /**
@@ -88,11 +81,28 @@ public struct Subdivision {
      - returns: Initialized Subdivision structure
      */
     public init(level: Int) {
+        self = Int(pow(2.0, (Double(level) + 2.0)))
+        /*
         self.level = level
         self.value = Subdivision.valueFrom(level)
+        */
     }
+    
+    /**
+     Check if a value is a valid Subdivision value.
+     
+     >`isValid(value: 32) // true`
+     >`isValid(value: 42) // false`
+     
+     - parameter value: Value to be checked
+     
+     - returns: If the value is a valid Subdivision value
+     */
+    public var isValid: Bool { return self.isPowerOfTwo }
+
 }
 
+/*
 // MARK: - Equatable
 extension Subdivision: Equatable { }
 
@@ -164,5 +174,4 @@ public func / (lhs: Subdivision, rhs: Float) -> Subdivision? {
 extension Subdivision: CustomStringConvertible {
     public var description: String { return "Subdivision: (value: \(value), level: \(level))" }
 }
-
-
+*/

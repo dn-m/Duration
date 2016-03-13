@@ -25,8 +25,6 @@
 		071D1A2E1C94CBFB00543F77 /* SubdivisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D1A291C94CBFB00543F77 /* SubdivisionTests.swift */; };
 		071D1A2F1C94CBFB00543F77 /* MetricalDurationIntervalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D1A2A1C94CBFB00543F77 /* MetricalDurationIntervalTests.swift */; };
 		071D1A301C94CBFB00543F77 /* MetricalDurationIntervalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D1A2A1C94CBFB00543F77 /* MetricalDurationIntervalTests.swift */; };
-		071D1A311C94CBFB00543F77 /* BeatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D1A2B1C94CBFB00543F77 /* BeatsTests.swift */; };
-		071D1A321C94CBFB00543F77 /* BeatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D1A2B1C94CBFB00543F77 /* BeatsTests.swift */; };
 		071D1A331C94CBFB00543F77 /* MetricalDurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D1A2C1C94CBFB00543F77 /* MetricalDurationTests.swift */; };
 		071D1A341C94CBFB00543F77 /* MetricalDurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D1A2C1C94CBFB00543F77 /* MetricalDurationTests.swift */; };
 		073DBA911C94DC8500EAFA61 /* IntervalTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA8E1C94DC8500EAFA61 /* IntervalTools.framework */; };
@@ -97,7 +95,6 @@
 		071D1A201C94CB4C00543F77 /* MetricalDurationInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricalDurationInterval.swift; sourceTree = "<group>"; };
 		071D1A291C94CBFB00543F77 /* SubdivisionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubdivisionTests.swift; sourceTree = "<group>"; };
 		071D1A2A1C94CBFB00543F77 /* MetricalDurationIntervalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricalDurationIntervalTests.swift; sourceTree = "<group>"; };
-		071D1A2B1C94CBFB00543F77 /* BeatsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatsTests.swift; sourceTree = "<group>"; };
 		071D1A2C1C94CBFB00543F77 /* MetricalDurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricalDurationTests.swift; sourceTree = "<group>"; };
 		073DBA8E1C94DC8500EAFA61 /* IntervalTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntervalTools.framework; path = Carthage/Build/iOS/IntervalTools.framework; sourceTree = "<group>"; };
 		073DBA8F1C94DC8500EAFA61 /* ArrayTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrayTools.framework; path = Carthage/Build/iOS/ArrayTools.framework; sourceTree = "<group>"; };
@@ -192,7 +189,6 @@
 			children = (
 				071D1A291C94CBFB00543F77 /* SubdivisionTests.swift */,
 				071D1A2A1C94CBFB00543F77 /* MetricalDurationIntervalTests.swift */,
-				071D1A2B1C94CBFB00543F77 /* BeatsTests.swift */,
 				071D1A2C1C94CBFB00543F77 /* MetricalDurationTests.swift */,
 				071D19EC1C94C94E00543F77 /* Supporting Files */,
 			);
@@ -470,7 +466,6 @@
 			files = (
 				071D1A331C94CBFB00543F77 /* MetricalDurationTests.swift in Sources */,
 				071D1A2D1C94CBFB00543F77 /* SubdivisionTests.swift in Sources */,
-				071D1A311C94CBFB00543F77 /* BeatsTests.swift in Sources */,
 				071D1A2F1C94CBFB00543F77 /* MetricalDurationIntervalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,7 +487,6 @@
 			files = (
 				071D1A341C94CBFB00543F77 /* MetricalDurationTests.swift in Sources */,
 				071D1A2E1C94CBFB00543F77 /* SubdivisionTests.swift in Sources */,
-				071D1A321C94CBFB00543F77 /* BeatsTests.swift in Sources */,
 				071D1A301C94CBFB00543F77 /* MetricalDurationIntervalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

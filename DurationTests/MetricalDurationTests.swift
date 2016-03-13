@@ -28,42 +28,42 @@ class MetricalDurationTests: XCTestCase {
     func testTotalSubdivisionWithBeatsAndSubdivision_1_8() {
         let s = Subdivision(value: 8)!
         let total = MetricalDuration.totalSubdivision(
-            withBeats: Beats(amount: 1), andSubdivision: s
+            withBeats: 1, andSubdivision: s
         )
         XCTAssertEqual(total, s)
     }
     
     func testTotalSubdivisionWithBeatsAndSubdivision_2_128() {
         let total = MetricalDuration.totalSubdivision(
-            withBeats: Beats(amount: 2), andSubdivision: Subdivision(value: 128)!
+            withBeats: 2, andSubdivision: Subdivision(value: 128)!
         )
         XCTAssertEqual(total, Subdivision(value: 64)!)
     }
     
     func testTotalSubdivisionWithBeatsAndSubdivision_4_16() {
         let total = MetricalDuration.totalSubdivision(
-            withBeats: Beats(amount: 4), andSubdivision: Subdivision(value: 16)!
+            withBeats: 4, andSubdivision: Subdivision(value: 16)!
         )
         XCTAssertEqual(total, Subdivision(value: 4)!)
     }
     
     func testTotalSubdivisionWithBeatsAndSubdivision_6_32() {
         let total = MetricalDuration.totalSubdivision(
-            withBeats: Beats(amount: 6), andSubdivision: Subdivision(value: 32)!
+            withBeats: 6, andSubdivision: Subdivision(value: 32)!
         )
         XCTAssertEqual(total, Subdivision(value: 16)!)
     }
     
     func testTotalSubdivisionWithBeatsAndSubdivision_7_64() {
         let total = MetricalDuration.totalSubdivision(
-            withBeats: Beats(amount: 7), andSubdivision: Subdivision(value: 64)!
+            withBeats: 7, andSubdivision: Subdivision(value: 64)!
         )
         XCTAssertEqual(total, Subdivision(value: 32)!)
     }
     
     func testTotalSubdivisionWithBeatsAndSubdivision_15_128() {
         let total = MetricalDuration.totalSubdivision(
-            withBeats: Beats(amount: 15), andSubdivision: Subdivision(value: 128)!
+            withBeats: 15, andSubdivision: Subdivision(value: 128)!
         )
         XCTAssertEqual(total, Subdivision(value: 32)!)
     }
@@ -125,54 +125,54 @@ class MetricalDurationTests: XCTestCase {
     
     func testRespellToBeats_Equivalent() {
         let d = MetricalDuration(1,8)!
-        let respelled = d.respell(with: Beats(amount: 1))!
+        let respelled = d.respell(withBeats: 1)!
         XCTAssertEqual(d.subdivision, respelled.subdivision)
     }
     
     func testRespellToBeatsNil() {
         let d = MetricalDuration(1,8)!
-        let respelled = d.respell(with: Beats(amount: 3))
+        let respelled = d.respell(withBeats: 3)
         XCTAssertNil(respelled)
     }
     
     func testRespellToBeats_PowerOfTwo_NewGreaterThanOld() {
         let d = MetricalDuration(2,8)!
-        let respelled = d.respell(with: Beats(amount: 8))!
-        XCTAssertEqual(respelled.subdivision.value, 32)
+        let respelled = d.respell(withBeats: 8)!
+        XCTAssertEqual(respelled.subdivision, 32)
     }
     
     func testRespellToBeats_PowerOfTwo_NewLessThanOld() {
         let d = MetricalDuration(8,32)!
-        let respelled = d.respell(with: Beats(amount: 2))!
-        XCTAssertEqual(respelled.subdivision.value, 8)
+        let respelled = d.respell(withBeats: 2)!
+        XCTAssertEqual(respelled.subdivision, 8)
     }
     
     func testRespellToSubdivision_Equivalent() {
         let d = MetricalDuration(1,8)!
-        let respelled = d.respell(with: Subdivision(value: 8)!)!
+        let respelled = d.respell(withSubdivision: 8)!
         XCTAssertEqual(respelled, d)
     }
     
     func testRespellToSubdivisionNil() {
         let d = MetricalDuration(1,8)!
-        let respelled = d.respell(with: Subdivision(value: 4)!)
+        let respelled = d.respell(withSubdivision: 4)
         XCTAssertNil(respelled)
     }
     
     func testRespellToSubdivision_NewGreaterThanOld() {
         let d = MetricalDuration(4,64)!
-        let respelled = d.respell(with: Subdivision(value: 128)!)!
-        XCTAssertEqual(respelled.beats.amount, 8)
+        let respelled = d.respell(withSubdivision: 128)!
+        XCTAssertEqual(respelled.beats, 8)
     }
     
     func testLevel() {
         let a = MetricalDuration(5,32)!
         let b = MetricalDuration(13,64)!
         let (newA, newB) = level(a, b)
-        XCTAssertEqual(newA.subdivision.value, 2048)
-        XCTAssertEqual(newA.beats.amount, 320)
-        XCTAssertEqual(newB.subdivision.value, 2048)
-        XCTAssertEqual(newB.beats.amount, 416)
+        XCTAssertEqual(newA.subdivision, 2048)
+        XCTAssertEqual(newA.beats, 320)
+        XCTAssertEqual(newB.subdivision, 2048)
+        XCTAssertEqual(newB.beats, 416)
     }
     
     func testAreLevelFalse() {
@@ -201,19 +201,19 @@ class MetricalDurationTests: XCTestCase {
         let a = MetricalDuration(20,32)!
         let b = MetricalDuration(10,32)!
         let (newA, newB) = reduce(a,b)
-        XCTAssertEqual(newA.beats.amount, 10)
-        XCTAssertEqual(newA.subdivision.value, 16)
-        XCTAssertEqual(newB.beats.amount, 5)
-        XCTAssertEqual(newB.subdivision.value, 16)
+        XCTAssertEqual(newA.beats, 10)
+        XCTAssertEqual(newA.subdivision, 16)
+        XCTAssertEqual(newB.beats, 5)
+        XCTAssertEqual(newB.subdivision, 16)
     }
     
     func testReduceHeterogeneous() {
         let a = MetricalDuration(10,32)!
         let b = MetricalDuration(30,128)!
         let (newA, newB) = reduce(a,b)
-        XCTAssertEqual(newA.beats.amount, 20)
-        XCTAssertEqual(newA.subdivision.value, 64)
-        XCTAssertEqual(newB.beats.amount, 15)
-        XCTAssertEqual(newB.subdivision.value, 64)
+        XCTAssertEqual(newA.beats, 20)
+        XCTAssertEqual(newA.subdivision, 64)
+        XCTAssertEqual(newB.beats, 15)
+        XCTAssertEqual(newB.subdivision, 64)
     }
 }

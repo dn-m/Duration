@@ -38,10 +38,10 @@ public struct MetricalDuration {
         andSubdivision subdivision: Subdivision
     ) -> Subdivision
     {
-        if beats.amount <= 1 { return subdivision }
-        let limit = beats.amount.isPowerOfTwo ? 1 : 2
+        if beats <= 1 { return subdivision }
+        let limit = beats.isPowerOfTwo ? 1 : 2
         var level = subdivision.level + 1
-        var amountBeats = closestPowerOfTwo(under: beats.amount)!
+        var amountBeats = closestPowerOfTwo(under: beats)!
         while amountBeats >= limit {
             amountBeats /= 2
             level -= 1
@@ -65,11 +65,11 @@ public struct MetricalDuration {
     
     /// Float value
     public var floatValue: Float {
-        return (Float(beats.amount) / Float(subdivision.value)) * scale
+        return (Float(beats) / Float(subdivision)) * scale
     }
     
     /// If `MetricalDuration` is represented in its most reduced form.
-    public var isReduced: Bool { return beats.amount.isOdd }
+    public var isReduced: Bool { return beats.isOdd }
     
     // MARK: - Initializers
     
@@ -96,10 +96,10 @@ public struct MetricalDuration {
      - parameter subdivisionValue: Value of `Subdivision`
      - parameter scale:            Scale
      */
-    public init?(_ beatsAmount: Int, _ subdivisionValue: Int, scale: Float = 1.0) {
+    public init?(_ beatsAmount: Beats, _ subdivisionValue: Int, scale: Float = 1.0) {
         guard let s = Subdivision(value: subdivisionValue) else { return nil }
         self.init(
-            beats: Beats(amount: beatsAmount),
+            beats: beatsAmount,
             subdivision: s
         )
     }
@@ -137,8 +137,8 @@ public struct MetricalDuration {
     */
     public func reduce() -> MetricalDuration {
         guard !self.isReduced else { return self }
-        var b = beats.amount
-        var s = subdivision.value
+        var b = beats
+        var s = subdivision
         while !b.isOdd {
             b /= 2
             s /= 2
@@ -154,10 +154,11 @@ public struct MetricalDuration {
      
      - returns: Logically equivalent MetricalDuration, represented with given Beats value
      */
-    public func respell(with newBeats: Beats) -> MetricalDuration? {
+    public func respell(withBeats newBeats: Beats) -> MetricalDuration? {
         guard beats != newBeats else { return self }
-        let ratio = Float(newBeats.amount) / Float(beats.amount)
-        guard let newSubdivision = subdivision * ratio else { return nil }
+        let ratio = Float(newBeats) / Float(beats)
+        let newSubdivision = Subdivision(Float(subdivision) * ratio)
+        guard newSubdivision.isValid else { return nil }
         return MetricalDuration(beats: newBeats, subdivision: newSubdivision)
     }
     
@@ -169,11 +170,12 @@ public struct MetricalDuration {
      
      - returns: Logically equivalent MetricalDuration, represented with given Subdivision value
      */
-    public func respell(with newSubdivision: Subdivision) -> MetricalDuration? {
+    public func respell(withSubdivision newSubdivision: Subdivision) -> MetricalDuration? {
         guard subdivision != newSubdivision else { return self }
-        let ratio = Float(newSubdivision.value) / Float(subdivision.value)
-        guard let newBeats = beats * ratio else { return nil }
-        return MetricalDuration(beats: newBeats, subdivision: newSubdivision)
+        let ratio = Float(newSubdivision) / Float(subdivision)
+        let newBeats = Float(beats) * ratio
+        guard newBeats.isInteger else { return nil }
+        return MetricalDuration(beats: Beats(newBeats), subdivision: newSubdivision)
     }
 }
 
@@ -208,7 +210,7 @@ public func < (lhs: MetricalDuration, rhs: MetricalDuration) -> Bool {
  */
 public func + (lhs: MetricalDuration, rhs: MetricalDuration) -> MetricalDuration {
     let (a,b) = reduce(lhs, rhs)
-    return MetricalDuration(a.beats.amount + b.beats.amount, a.subdivision.value)!
+    return MetricalDuration(a.beats + b.beats, a.subdivision)!
 }
 
 /**
@@ -218,7 +220,7 @@ public func + (lhs: MetricalDuration, rhs: MetricalDuration) -> MetricalDuration
  */
 public func - (lhs: MetricalDuration, rhs: MetricalDuration) -> MetricalDuration {
     let (a,b) = reduce(lhs, rhs)
-    return MetricalDuration(a.beats.amount - b.beats.amount, a.subdivision.value)!
+    return MetricalDuration(a.beats - b.beats, a.subdivision)!
 }
 
 /**
@@ -231,9 +233,9 @@ public func level(a: MetricalDuration, _ b: MetricalDuration)
     -> (MetricalDuration, MetricalDuration)
 {
     guard !areLevel(a,b) else { return (a,b) }
-    let a_n = a.beats.amount * b.subdivision.value
-    let b_n = b.beats.amount * a.subdivision.value
-    let d = b.subdivision.value * a.subdivision.value
+    let a_n = a.beats * b.subdivision
+    let b_n = b.beats * a.subdivision
+    let d = b.subdivision * a.subdivision
     let newA = MetricalDuration(a_n, d)!
     let newB = MetricalDuration(b_n, d)!
     return (newA, newB)
@@ -256,10 +258,10 @@ public func reduce(a: MetricalDuration, _ b: MetricalDuration)
     -> (MetricalDuration, MetricalDuration)
 {
     let (a,b) = level(a,b)
-    var a_n = a.beats.amount
-    var a_d = a.subdivision.value
-    var b_n = b.beats.amount
-    var b_d = b.subdivision.value
+    var a_n = a.beats
+    var a_d = a.subdivision
+    var b_n = b.beats
+    var b_d = b.subdivision
     while a_n.isEven && b_n.isEven {
         a_n /= 2
         a_d /= 2
@@ -276,16 +278,14 @@ public func reduce(a: MetricalDuration, _ b: MetricalDuration)
     Otherwise `false`.
  */
 public func areReduced(a: MetricalDuration, _ b: MetricalDuration) -> Bool {
-    return a.beats.amount.isOdd || b.beats.amount.isOdd
+    return a.beats.isOdd || b.beats.isOdd
 }
 
 // MARK: - CustomStringConvertible
 extension MetricalDuration: CustomStringConvertible {
     
     public var description: String {
-        var result: String = beats.amount == 0
-            ? "Duration.Zero"
-            : "\(beats.amount)/\(subdivision.value)"
+        var result: String = beats == 0 ? "Duration.Zero" : "\(beats)/\(subdivision.value)"
         if scale != 1.0 { result += " * \(scale)" }
         return result
     }
