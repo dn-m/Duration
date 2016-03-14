@@ -102,78 +102,78 @@ class MetricalDurationIntervalTests: XCTestCase {
         let stop = MetricalDuration(9,8)!
         let i1 = MetricalDurationInterval(start, stop)
         let i2 = MetricalDurationInterval(start, stop)
-        XCTAssert(i1.relationshipWith(i2) == .Equals)
+        XCTAssert(i1.relationship(with: i2) == .Equals)
     }
     
     func testIntervalPrecedes() {
         let i1 = MetricalDurationInterval((1,8),(2,8))!
         let i2 = MetricalDurationInterval((3,8),(4,8))!
-        XCTAssert(i1.relationshipWith(i2) == .Precedes)
+        XCTAssert(i1.relationship(with: i2) == .Precedes)
     }
     
     func testIntervalMeets() {
         let i1 = MetricalDurationInterval((1,8),(2,8))!
         let i2 = MetricalDurationInterval((2,8),(4,8))!
-        XCTAssert(i1.relationshipWith(i2) == .Meets)
+        XCTAssert(i1.relationship(with: i2) == .Meets)
     }
     
     func testIntervalOverlaps() {
         let i1 = MetricalDurationInterval((1,8),(3,8))!
         let i2 = MetricalDurationInterval((2,8),(4,8))!
-        XCTAssert(i1.relationshipWith(i2) == .Overlaps)
+        XCTAssert(i1.relationship(with: i2) == .Overlaps)
     }
     
     func testIntervalFinishedBy() {
         let i1 = MetricalDurationInterval((1,8),(4,8))!
         let i2 = MetricalDurationInterval((2,8),(4,8))!
-        XCTAssert(i1.relationshipWith(i2) == .FinishedBy)
+        XCTAssert(i1.relationship(with: i2) == .FinishedBy)
     }
     
     func testIntervalContains() {
         let i1 = MetricalDurationInterval((1,8),(4,8))!
         let i2 = MetricalDurationInterval((2,8),(3,8))!
-        XCTAssert(i1.relationshipWith(i2) == .Contains)
+        XCTAssert(i1.relationship(with: i2) == .Contains)
     }
     
     func testIntervalStarts() {
         let i1 = MetricalDurationInterval((1,8),(3,8))!
         let i2 = MetricalDurationInterval((1,8),(4,8))!
-        XCTAssert(i1.relationshipWith(i2) == .Starts)
+        XCTAssert(i1.relationship(with: i2) == .Starts)
     }
     
     func testIntervalStartedBy() {
         let i1 = MetricalDurationInterval((1,8),(4,8))!
         let i2 = MetricalDurationInterval((1,8),(3,8))!
-        XCTAssert(i1.relationshipWith(i2) == .StartedBy)
+        XCTAssert(i1.relationship(with: i2) == .StartedBy)
     }
     
     func testIntervalDuring() {
         let i1 = MetricalDurationInterval((2,8),(3,8))!
         let i2 = MetricalDurationInterval((1,8),(4,8))!
-        XCTAssert(i1.relationshipWith(i2) == .During)
+        XCTAssert(i1.relationship(with: i2) == .During)
     }
     
     func testIntervalFinishes() {
         let i1 = MetricalDurationInterval((2,8),(4,8))!
         let i2 = MetricalDurationInterval((1,8),(4,8))!
-        XCTAssert(i1.relationshipWith(i2) == .Finishes)
+        XCTAssert(i1.relationship(with: i2) == .Finishes)
     }
     
     func testIntervalOverlappedBy() {
         let i1 = MetricalDurationInterval((2,8),(4,8))!
         let i2 = MetricalDurationInterval((1,8),(3,8))!
-        XCTAssert(i1.relationshipWith(i2) == .OverlappedBy)
+        XCTAssert(i1.relationship(with: i2) == .OverlappedBy)
     }
     
     func testIntervalMetBy() {
         let i1 = MetricalDurationInterval((2,8),(3,8))!
         let i2 = MetricalDurationInterval((1,8),(2,8))!
-        XCTAssert(i1.relationshipWith(i2) == .MetBy)
+        XCTAssert(i1.relationship(with: i2) == .MetBy)
     }
     
     func testIntervalPrecededBy() {
         let i1 = MetricalDurationInterval((3,8),(4,8))!
         let i2 = MetricalDurationInterval((1,8),(2,8))!
-        XCTAssert(i1.relationshipWith(i2) == .PrecededBy)
+        XCTAssert(i1.relationship(with: i2) == .PrecededBy)
     }
 }

@@ -50,8 +50,8 @@ public struct MetricalDurationInterval: Interval {
      - returns: If `duration` is contained by `MetricalDurationInterval`.
         Left- and right-closed.
      */
-    public func contains(duration: MetricalDuration) -> Bool {
-        return duration > start && duration < stop
+    public func contains(value: MetricalDuration) -> Bool {
+        return value > start && value < stop
     }
 
     // MARK: Instance Methods
@@ -59,7 +59,7 @@ public struct MetricalDurationInterval: Interval {
     /**    
     - returns: `IntervalRelationship` with another `MetricalDurationInterval`
     */
-    public func relationshipWith(interval: MetricalDurationInterval) -> IntervalRelationship {
+    public func relationship(with interval: MetricalDurationInterval) -> IntervalRelationship {
         if stop < interval.start { return .Precedes }
         else if stop == interval.start { return .Meets }
         else if start < interval.start && interval.contains(stop) { return .Overlaps }

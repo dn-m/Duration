@@ -8,10 +8,29 @@
 
 import Foundation
 
-public protocol Interval {
-    typealias T = Comparable
+/**
+ Closed interval between two values.
+ */
+public protocol Interval: Equatable {
+    
+    associatedtype T = Comparable
+    
+    /// Start value.
     var start: T { get }
+    
+    /// Stop value.
     var stop: T { get }
+    
+    /// Span between `start` and `stop` values.
     var span: T { get }
-    func relationshipWith(interval: Self) -> IntervalRelationship
+    
+    /**
+     - returns: `true` if `value > start && value < stop`. Otherwise `false`.
+     */
+    func contains(value: T) -> Bool
+    
+    /**
+     - returns: `IntervalRelationship` between this `Interval` and another
+     */
+    func relationship(with interval: Self) -> IntervalRelationship
 }

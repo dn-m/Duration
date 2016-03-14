@@ -285,7 +285,7 @@ public func areReduced(a: MetricalDuration, _ b: MetricalDuration) -> Bool {
 extension MetricalDuration: CustomStringConvertible {
     
     public var description: String {
-        var result: String = beats == 0 ? "Duration.Zero" : "\(beats)/\(subdivision.value)"
+        var result: String = beats == 0 ? "Duration.Zero" : "\(beats)/\(subdivision)"
         if scale != 1.0 { result += " * \(scale)" }
         return result
     }

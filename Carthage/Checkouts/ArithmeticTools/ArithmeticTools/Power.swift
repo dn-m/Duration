@@ -18,15 +18,15 @@ import Foundation
  - returns: Power-of-two value closest to target value
  */
 public func closestPowerOfTwo<T: ArithmeticType>(to target: T) -> T? {
-    return closestPowerOfTwo(withCoefficient: 2, to: target)
+    return closestPowerOfTwo(withCoefficient: T.two, to: target)
 }
 
 
 /**
- - returns: Power-of-two value closest to and less than target alue
+ - returns: Power-of-two value closest to and less than target value
  */
 public func closestPowerOfTwo<T: ArithmeticType>(under target: T) -> T? {
-    return closestPowerOfTwo(withCoefficient: 2, under: target)
+    return closestPowerOfTwo(withCoefficient: T.two, under: target)
 }
 
 /**
