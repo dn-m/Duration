@@ -1,0 +1,7 @@
+language: objective-c
+osx_image: xcode7.3
+xcode_project: Duration.xcodeproj
+xcode_scheme: DurationMac
+xcode_sdk: macosx10.11
+
+before_install: carthage update
