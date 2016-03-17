@@ -7,8 +7,20 @@
 //
 
 import Foundation
+import TreeTools
 
-public class MetricalDurationNode {
+public class MetricalDurationNode: Node, MetricalDurationSpanning {
     
+    // MARK: - Instance Properties
     
+    /**
+     `MetricalDurationInterval` of `MetricalDurationNode`.
+     */
+    public var interval: MetricalDurationInterval = MetricalDurationInterval.zero
+    
+    public class func metricalDurationNode(with: MetricalDuration)
+        -> RigidMetricalDurationNode?
+    {
+        return nil
+    }
 }

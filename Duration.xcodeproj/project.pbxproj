@@ -39,6 +39,10 @@
 		076CCBE11C9B5449007DC5F6 /* TreeTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076CCBDE1C9B5449007DC5F6 /* TreeTools.framework */; };
 		076CCBE21C9B5449007DC5F6 /* EnumTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076CCBDF1C9B5449007DC5F6 /* EnumTools.framework */; };
 		076CCBE31C9B5449007DC5F6 /* DirectionTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076CCBE01C9B5449007DC5F6 /* DirectionTools.framework */; };
+		076CCBEB1C9B5CF5007DC5F6 /* RigidMetricalDurationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076CCBEA1C9B5CF5007DC5F6 /* RigidMetricalDurationNode.swift */; };
+		076CCBEC1C9B5CF5007DC5F6 /* RigidMetricalDurationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076CCBEA1C9B5CF5007DC5F6 /* RigidMetricalDurationNode.swift */; };
+		076CCBEE1C9B5D0E007DC5F6 /* ElasticMetricalDurationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076CCBED1C9B5D0E007DC5F6 /* ElasticMetricalDurationNode.swift */; };
+		076CCBEF1C9B5D0E007DC5F6 /* ElasticMetricalDurationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076CCBED1C9B5D0E007DC5F6 /* ElasticMetricalDurationNode.swift */; };
 		079980A51C9B3961006A55B8 /* DurationSpanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079980A41C9B3961006A55B8 /* DurationSpanning.swift */; };
 		079980A61C9B3961006A55B8 /* DurationSpanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079980A41C9B3961006A55B8 /* DurationSpanning.swift */; };
 		079980A81C9B3984006A55B8 /* MetricalDurationSpanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079980A71C9B3984006A55B8 /* MetricalDurationSpanning.swift */; };
@@ -120,6 +124,8 @@
 		076CCBDE1C9B5449007DC5F6 /* TreeTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TreeTools.framework; path = Carthage/Build/Mac/TreeTools.framework; sourceTree = "<group>"; };
 		076CCBDF1C9B5449007DC5F6 /* EnumTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EnumTools.framework; path = Carthage/Build/Mac/EnumTools.framework; sourceTree = "<group>"; };
 		076CCBE01C9B5449007DC5F6 /* DirectionTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DirectionTools.framework; path = Carthage/Build/Mac/DirectionTools.framework; sourceTree = "<group>"; };
+		076CCBEA1C9B5CF5007DC5F6 /* RigidMetricalDurationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RigidMetricalDurationNode.swift; sourceTree = "<group>"; };
+		076CCBED1C9B5D0E007DC5F6 /* ElasticMetricalDurationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElasticMetricalDurationNode.swift; sourceTree = "<group>"; };
 		079980A41C9B3961006A55B8 /* DurationSpanning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurationSpanning.swift; sourceTree = "<group>"; };
 		079980A71C9B3984006A55B8 /* MetricalDurationSpanning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricalDurationSpanning.swift; sourceTree = "<group>"; };
 		079980AD1C9B45B2006A55B8 /* MetricalDurationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricalDurationNode.swift; sourceTree = "<group>"; };
@@ -206,6 +212,8 @@
 				079980A41C9B3961006A55B8 /* DurationSpanning.swift */,
 				079980A71C9B3984006A55B8 /* MetricalDurationSpanning.swift */,
 				079980AD1C9B45B2006A55B8 /* MetricalDurationNode.swift */,
+				076CCBEA1C9B5CF5007DC5F6 /* RigidMetricalDurationNode.swift */,
+				076CCBED1C9B5D0E007DC5F6 /* ElasticMetricalDurationNode.swift */,
 				071D1A1E1C94CB4C00543F77 /* Beats.swift */,
 				071D1A1F1C94CB4C00543F77 /* MetricalDuration.swift */,
 				071D1A201C94CB4C00543F77 /* MetricalDurationInterval.swift */,
@@ -501,6 +509,8 @@
 				079980A81C9B3984006A55B8 /* MetricalDurationSpanning.swift in Sources */,
 				071D1A271C94CB4C00543F77 /* MetricalDurationInterval.swift in Sources */,
 				071D1A211C94CB4C00543F77 /* Subdivision.swift in Sources */,
+				076CCBEE1C9B5D0E007DC5F6 /* ElasticMetricalDurationNode.swift in Sources */,
+				076CCBEB1C9B5CF5007DC5F6 /* RigidMetricalDurationNode.swift in Sources */,
 				071D1A231C94CB4C00543F77 /* Beats.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,6 +535,8 @@
 				079980A91C9B3984006A55B8 /* MetricalDurationSpanning.swift in Sources */,
 				071D1A281C94CB4C00543F77 /* MetricalDurationInterval.swift in Sources */,
 				071D1A221C94CB4C00543F77 /* Subdivision.swift in Sources */,
+				076CCBEF1C9B5D0E007DC5F6 /* ElasticMetricalDurationNode.swift in Sources */,
+				076CCBEC1C9B5CF5007DC5F6 /* RigidMetricalDurationNode.swift in Sources */,
 				071D1A241C94CB4C00543F77 /* Beats.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

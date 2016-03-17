@@ -14,6 +14,10 @@ import IntervalTools
  */
 public struct MetricalDurationInterval: Interval {
     
+    // MARK: - Type Properties
+    
+    public static let zero: MetricalDurationInterval = MetricalDurationInterval((0,8),(0,8))!
+    
     // MARK: - Instance Properties
     
     /// `MetricalDuration` at start of interval.
