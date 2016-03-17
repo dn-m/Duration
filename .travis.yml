@@ -6,7 +6,7 @@ xcode_sdk: macosx10.11
 
 before_install: 
   - brew update
-  - brew install carthage
+  - brew upgrade carthage
 
 before_script:
   - carthage bootstrap
