@@ -33,6 +33,12 @@
 		073DBA971C94DC9B00EAFA61 /* IntervalTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA941C94DC9B00EAFA61 /* IntervalTools.framework */; };
 		073DBA981C94DC9B00EAFA61 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA951C94DC9B00EAFA61 /* ArrayTools.framework */; };
 		073DBA991C94DC9B00EAFA61 /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA961C94DC9B00EAFA61 /* ArithmeticTools.framework */; };
+		076CCBDB1C9B5431007DC5F6 /* TreeTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076CCBD81C9B5431007DC5F6 /* TreeTools.framework */; };
+		076CCBDC1C9B5431007DC5F6 /* EnumTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076CCBD91C9B5431007DC5F6 /* EnumTools.framework */; };
+		076CCBDD1C9B5431007DC5F6 /* DirectionTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076CCBDA1C9B5431007DC5F6 /* DirectionTools.framework */; };
+		076CCBE11C9B5449007DC5F6 /* TreeTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076CCBDE1C9B5449007DC5F6 /* TreeTools.framework */; };
+		076CCBE21C9B5449007DC5F6 /* EnumTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076CCBDF1C9B5449007DC5F6 /* EnumTools.framework */; };
+		076CCBE31C9B5449007DC5F6 /* DirectionTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076CCBE01C9B5449007DC5F6 /* DirectionTools.framework */; };
 		079980A51C9B3961006A55B8 /* DurationSpanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079980A41C9B3961006A55B8 /* DurationSpanning.swift */; };
 		079980A61C9B3961006A55B8 /* DurationSpanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079980A41C9B3961006A55B8 /* DurationSpanning.swift */; };
 		079980A81C9B3984006A55B8 /* MetricalDurationSpanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079980A71C9B3984006A55B8 /* MetricalDurationSpanning.swift */; };
@@ -108,6 +114,12 @@
 		073DBA941C94DC9B00EAFA61 /* IntervalTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntervalTools.framework; path = Carthage/Build/Mac/IntervalTools.framework; sourceTree = "<group>"; };
 		073DBA951C94DC9B00EAFA61 /* ArrayTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrayTools.framework; path = Carthage/Build/Mac/ArrayTools.framework; sourceTree = "<group>"; };
 		073DBA961C94DC9B00EAFA61 /* ArithmeticTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArithmeticTools.framework; path = Carthage/Build/Mac/ArithmeticTools.framework; sourceTree = "<group>"; };
+		076CCBD81C9B5431007DC5F6 /* TreeTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TreeTools.framework; path = Carthage/Build/iOS/TreeTools.framework; sourceTree = "<group>"; };
+		076CCBD91C9B5431007DC5F6 /* EnumTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EnumTools.framework; path = Carthage/Build/iOS/EnumTools.framework; sourceTree = "<group>"; };
+		076CCBDA1C9B5431007DC5F6 /* DirectionTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DirectionTools.framework; path = Carthage/Build/iOS/DirectionTools.framework; sourceTree = "<group>"; };
+		076CCBDE1C9B5449007DC5F6 /* TreeTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TreeTools.framework; path = Carthage/Build/Mac/TreeTools.framework; sourceTree = "<group>"; };
+		076CCBDF1C9B5449007DC5F6 /* EnumTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EnumTools.framework; path = Carthage/Build/Mac/EnumTools.framework; sourceTree = "<group>"; };
+		076CCBE01C9B5449007DC5F6 /* DirectionTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DirectionTools.framework; path = Carthage/Build/Mac/DirectionTools.framework; sourceTree = "<group>"; };
 		079980A41C9B3961006A55B8 /* DurationSpanning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurationSpanning.swift; sourceTree = "<group>"; };
 		079980A71C9B3984006A55B8 /* MetricalDurationSpanning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricalDurationSpanning.swift; sourceTree = "<group>"; };
 		079980AD1C9B45B2006A55B8 /* MetricalDurationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricalDurationNode.swift; sourceTree = "<group>"; };
@@ -118,6 +130,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076CCBDB1C9B5431007DC5F6 /* TreeTools.framework in Frameworks */,
+				076CCBDC1C9B5431007DC5F6 /* EnumTools.framework in Frameworks */,
+				076CCBDD1C9B5431007DC5F6 /* DirectionTools.framework in Frameworks */,
 				073DBA911C94DC8500EAFA61 /* IntervalTools.framework in Frameworks */,
 				073DBA921C94DC8500EAFA61 /* ArrayTools.framework in Frameworks */,
 				073DBA931C94DC8500EAFA61 /* ArithmeticTools.framework in Frameworks */,
@@ -139,6 +154,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076CCBE11C9B5449007DC5F6 /* TreeTools.framework in Frameworks */,
+				076CCBE21C9B5449007DC5F6 /* EnumTools.framework in Frameworks */,
+				076CCBE31C9B5449007DC5F6 /* DirectionTools.framework in Frameworks */,
 				073DBA971C94DC9B00EAFA61 /* IntervalTools.framework in Frameworks */,
 				073DBA981C94DC9B00EAFA61 /* ArrayTools.framework in Frameworks */,
 				073DBA991C94DC9B00EAFA61 /* ArithmeticTools.framework in Frameworks */,
@@ -235,6 +253,9 @@
 		071D1A0F1C94CAFA00543F77 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				076CCBD81C9B5431007DC5F6 /* TreeTools.framework */,
+				076CCBD91C9B5431007DC5F6 /* EnumTools.framework */,
+				076CCBDA1C9B5431007DC5F6 /* DirectionTools.framework */,
 				073DBA8E1C94DC8500EAFA61 /* IntervalTools.framework */,
 				073DBA8F1C94DC8500EAFA61 /* ArrayTools.framework */,
 				073DBA901C94DC8500EAFA61 /* ArithmeticTools.framework */,
@@ -245,6 +266,9 @@
 		071D1A101C94CAFD00543F77 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
+				076CCBDE1C9B5449007DC5F6 /* TreeTools.framework */,
+				076CCBDF1C9B5449007DC5F6 /* EnumTools.framework */,
+				076CCBE01C9B5449007DC5F6 /* DirectionTools.framework */,
 				073DBA941C94DC9B00EAFA61 /* IntervalTools.framework */,
 				073DBA951C94DC9B00EAFA61 /* ArrayTools.framework */,
 				073DBA961C94DC9B00EAFA61 /* ArithmeticTools.framework */,
@@ -435,6 +459,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/IntervalTools.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ArrayTools.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ArithmeticTools.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/TreeTools.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/EnumTools.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/DirectionTools.framework",
 			);
 			outputPaths = (
 			);
@@ -451,6 +478,9 @@
 				"$(SRCROOT)/Carthage/Build/Mac/IntervalTools.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/ArrayTools.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/ArithmeticTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/TreeTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/DirectionTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/EnumTools.framework",
 			);
 			outputPaths = (
 			);
