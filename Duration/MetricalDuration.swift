@@ -209,7 +209,7 @@ public func < (lhs: MetricalDuration, rhs: MetricalDuration) -> Bool {
  - returns: Sum of two `MetricalDuration` values
  */
 public func + (lhs: MetricalDuration, rhs: MetricalDuration) -> MetricalDuration {
-    let (a,b) = reduce(lhs, rhs)
+    let (a,b) = reduced(lhs, rhs)
     return MetricalDuration(a.beats + b.beats, a.subdivision)!
 }
 
@@ -219,7 +219,7 @@ public func + (lhs: MetricalDuration, rhs: MetricalDuration) -> MetricalDuration
  - returns: Difference of two `MetricalDuration` values
  */
 public func - (lhs: MetricalDuration, rhs: MetricalDuration) -> MetricalDuration {
-    let (a,b) = reduce(lhs, rhs)
+    let (a,b) = reduced(lhs, rhs)
     return MetricalDuration(a.beats - b.beats, a.subdivision)!
 }
 
@@ -229,7 +229,7 @@ public func - (lhs: MetricalDuration, rhs: MetricalDuration) -> MetricalDuration
  
  - returns: MetricalDurations with equivalent `Subdivision` values
  */
-public func level(a: MetricalDuration, _ b: MetricalDuration)
+public func leveled(a: MetricalDuration, _ b: MetricalDuration)
     -> (MetricalDuration, MetricalDuration)
 {
     guard !areLevel(a,b) else { return (a,b) }
@@ -254,10 +254,10 @@ public func areLevel(a: MetricalDuration, _ b: MetricalDuration) -> Bool {
  
  - returns: MetricalDurations in mutually most reduced forms.
  */
-public func reduce(a: MetricalDuration, _ b: MetricalDuration)
+public func reduced(a: MetricalDuration, _ b: MetricalDuration)
     -> (MetricalDuration, MetricalDuration)
 {
-    let (a,b) = level(a,b)
+    let (a,b) = leveled(a,b)
     var a_n = a.beats
     var a_d = a.subdivision
     var b_n = b.beats

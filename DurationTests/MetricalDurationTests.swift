@@ -165,10 +165,10 @@ class MetricalDurationTests: XCTestCase {
         XCTAssertEqual(respelled.beats, 8)
     }
     
-    func testLevel() {
+    func testLeveled() {
         let a = MetricalDuration(5,32)!
         let b = MetricalDuration(13,64)!
-        let (newA, newB) = level(a, b)
+        let (newA, newB) = leveled(a, b)
         XCTAssertEqual(newA.subdivision, 2048)
         XCTAssertEqual(newA.beats, 320)
         XCTAssertEqual(newB.subdivision, 2048)
@@ -200,7 +200,7 @@ class MetricalDurationTests: XCTestCase {
     func testReduceHomogeneous() {
         let a = MetricalDuration(20,32)!
         let b = MetricalDuration(10,32)!
-        let (newA, newB) = reduce(a,b)
+        let (newA, newB) = reduced(a,b)
         XCTAssertEqual(newA.beats, 10)
         XCTAssertEqual(newA.subdivision, 16)
         XCTAssertEqual(newB.beats, 5)
@@ -210,7 +210,7 @@ class MetricalDurationTests: XCTestCase {
     func testReduceHeterogeneous() {
         let a = MetricalDuration(10,32)!
         let b = MetricalDuration(30,128)!
-        let (newA, newB) = reduce(a,b)
+        let (newA, newB) = reduced(a,b)
         XCTAssertEqual(newA.beats, 20)
         XCTAssertEqual(newA.subdivision, 64)
         XCTAssertEqual(newB.beats, 15)
