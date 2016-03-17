@@ -560,7 +560,7 @@
 				INFOPLIST_FILE = CopyTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.CopyToolsMac;
 				PRODUCT_NAME = CopyTools;
 				SDKROOT = macosx;
@@ -583,7 +583,7 @@
 				INFOPLIST_FILE = CopyTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.CopyToolsMac;
 				PRODUCT_NAME = CopyTools;
 				SDKROOT = macosx;
@@ -600,7 +600,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = CopyToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.CopyToolsMacTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -617,7 +617,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = CopyToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.CopyToolsMacTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -643,6 +643,7 @@
 				07A7673C1C88A6DA00B3B1EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07A7673D1C88A6DA00B3B1EF /* Build configuration list for PBXNativeTarget "CopyToolsTests" */ = {
 			isa = XCConfigurationList;
@@ -651,6 +652,7 @@
 				07A7673F1C88A6DA00B3B1EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07A767591C88A70900B3B1EF /* Build configuration list for PBXNativeTarget "CopyToolsMac" */ = {
 			isa = XCConfigurationList;
@@ -659,6 +661,7 @@
 				07A7675B1C88A70900B3B1EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07A7675C1C88A70900B3B1EF /* Build configuration list for PBXNativeTarget "CopyToolsMacTests" */ = {
 			isa = XCConfigurationList;
@@ -667,6 +670,7 @@
 				07A7675E1C88A70900B3B1EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
