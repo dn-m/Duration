@@ -4,4 +4,9 @@ xcode_project: Duration.xcodeproj
 xcode_scheme: DurationMac
 xcode_sdk: macosx10.11
 
-before_install: carthage update
+before_install: 
+  - brew update
+  - brew install carthage
+
+before_script:
+  - carthage bootstrap
