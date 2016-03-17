@@ -33,6 +33,12 @@
 		073DBA971C94DC9B00EAFA61 /* IntervalTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA941C94DC9B00EAFA61 /* IntervalTools.framework */; };
 		073DBA981C94DC9B00EAFA61 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA951C94DC9B00EAFA61 /* ArrayTools.framework */; };
 		073DBA991C94DC9B00EAFA61 /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA961C94DC9B00EAFA61 /* ArithmeticTools.framework */; };
+		079980A51C9B3961006A55B8 /* DurationSpanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079980A41C9B3961006A55B8 /* DurationSpanning.swift */; };
+		079980A61C9B3961006A55B8 /* DurationSpanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079980A41C9B3961006A55B8 /* DurationSpanning.swift */; };
+		079980A81C9B3984006A55B8 /* MetricalDurationSpanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079980A71C9B3984006A55B8 /* MetricalDurationSpanning.swift */; };
+		079980A91C9B3984006A55B8 /* MetricalDurationSpanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079980A71C9B3984006A55B8 /* MetricalDurationSpanning.swift */; };
+		079980AE1C9B45B2006A55B8 /* MetricalDurationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079980AD1C9B45B2006A55B8 /* MetricalDurationNode.swift */; };
+		079980AF1C9B45B2006A55B8 /* MetricalDurationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079980AD1C9B45B2006A55B8 /* MetricalDurationNode.swift */; };
 		07CC264F1C94DDF00099C21C /* IntervalTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA8E1C94DC8500EAFA61 /* IntervalTools.framework */; };
 		07CC26501C94DDF00099C21C /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA8F1C94DC8500EAFA61 /* ArrayTools.framework */; };
 		07CC26511C94DDF00099C21C /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA901C94DC8500EAFA61 /* ArithmeticTools.framework */; };
@@ -102,6 +108,9 @@
 		073DBA941C94DC9B00EAFA61 /* IntervalTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntervalTools.framework; path = Carthage/Build/Mac/IntervalTools.framework; sourceTree = "<group>"; };
 		073DBA951C94DC9B00EAFA61 /* ArrayTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrayTools.framework; path = Carthage/Build/Mac/ArrayTools.framework; sourceTree = "<group>"; };
 		073DBA961C94DC9B00EAFA61 /* ArithmeticTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArithmeticTools.framework; path = Carthage/Build/Mac/ArithmeticTools.framework; sourceTree = "<group>"; };
+		079980A41C9B3961006A55B8 /* DurationSpanning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurationSpanning.swift; sourceTree = "<group>"; };
+		079980A71C9B3984006A55B8 /* MetricalDurationSpanning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricalDurationSpanning.swift; sourceTree = "<group>"; };
+		079980AD1C9B45B2006A55B8 /* MetricalDurationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricalDurationNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +185,9 @@
 			isa = PBXGroup;
 			children = (
 				071D1A1D1C94CB4C00543F77 /* Subdivision.swift */,
+				079980A41C9B3961006A55B8 /* DurationSpanning.swift */,
+				079980A71C9B3984006A55B8 /* MetricalDurationSpanning.swift */,
+				079980AD1C9B45B2006A55B8 /* MetricalDurationNode.swift */,
 				071D1A1E1C94CB4C00543F77 /* Beats.swift */,
 				071D1A1F1C94CB4C00543F77 /* MetricalDuration.swift */,
 				071D1A201C94CB4C00543F77 /* MetricalDurationInterval.swift */,
@@ -453,7 +465,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079980A51C9B3961006A55B8 /* DurationSpanning.swift in Sources */,
 				071D1A251C94CB4C00543F77 /* MetricalDuration.swift in Sources */,
+				079980AE1C9B45B2006A55B8 /* MetricalDurationNode.swift in Sources */,
+				079980A81C9B3984006A55B8 /* MetricalDurationSpanning.swift in Sources */,
 				071D1A271C94CB4C00543F77 /* MetricalDurationInterval.swift in Sources */,
 				071D1A211C94CB4C00543F77 /* Subdivision.swift in Sources */,
 				071D1A231C94CB4C00543F77 /* Beats.swift in Sources */,
@@ -474,7 +489,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079980A61C9B3961006A55B8 /* DurationSpanning.swift in Sources */,
 				071D1A261C94CB4C00543F77 /* MetricalDuration.swift in Sources */,
+				079980AF1C9B45B2006A55B8 /* MetricalDurationNode.swift in Sources */,
+				079980A91C9B3984006A55B8 /* MetricalDurationSpanning.swift in Sources */,
 				071D1A281C94CB4C00543F77 /* MetricalDurationInterval.swift in Sources */,
 				071D1A221C94CB4C00543F77 /* Subdivision.swift in Sources */,
 				071D1A241C94CB4C00543F77 /* Beats.swift in Sources */,

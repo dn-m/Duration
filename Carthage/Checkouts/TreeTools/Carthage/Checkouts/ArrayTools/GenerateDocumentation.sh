@@ -1,17 +1,15 @@
 #!/bin/bash
 
-VERSION=$(git describe --tags $(git rev-list --tags --max-count=1))
-NAME=${PWD##*/}
-
 jazzy \
   --clean \
   --author James Bean \
   --author_url http://jamesbean.info \
-  --github_url https://github.com/dn-m/$NAME \
-  --module-version $VERSION \
-  --module $NAME \
+  --github_url https://github.com/dn-m/ArrayTools \
+  --module-version 1.0.1 \
+  --module ArrayTools \
   --root-url https://dn-m.github.io \
-  --output ../site/$NAME \
+  --output ../site/ArrayTools \
   --skip-undocumented \
   --hide-documentation-coverage \
   --theme fullwidth
+
