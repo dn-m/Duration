@@ -11,6 +11,8 @@ import Foundation
 /**
  MetricalDurationNode that scales the MetricalDurationInterval values of its children to fit
     the MetricalDuration of its root.
+ 
+ - warning: Not yet implemented!
  */
 public class RigidMetricalDurationNode: MetricalDurationNode {
     

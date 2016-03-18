@@ -9,11 +9,14 @@
 import Foundation
 import TreeTools
 
+/// Tree structure with MetricalDuration value.
 public class MetricalDurationNode: Node, MetricalDurationSpanning {
     
     // MARK: - Instance Properties
     
     /**
+     - warning: Not yet implemented!
+     
      `MetricalDurationInterval` of `MetricalDurationNode`.
      */
     public var interval: MetricalDurationInterval = MetricalDurationInterval.zero
