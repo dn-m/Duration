@@ -52,5 +52,4 @@ public extension Subdivision {
      - returns: `true` if `Subdivision` is a power-of-two. Otherwise `false`.
      */
     public var isValid: Bool { return self.isPowerOfTwo }
-
 }
