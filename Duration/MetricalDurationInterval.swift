@@ -8,6 +8,7 @@
 
 import Foundation
 import IntervalTools
+import ArithmeticTools
 
 /**
  Open interval between two `MetricalDuration` values.
@@ -35,8 +36,7 @@ public struct MetricalDurationInterval: Interval {
     Create a `MetricalDurationInterval` with two `MetricalDuration` values.
     */
     public init(_ start: MetricalDuration, _ stop: MetricalDuration) {
-        self.start = start
-        self.stop = stop
+        (self.start, self.stop) = ordered(start, stop)
         self.span = stop - start
     }
     

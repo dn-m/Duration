@@ -15,5 +15,6 @@ public struct TempoInterpolation: MetricalDurationSpanning {
     public let stop: Tempo
     
     
+
     // TODO: public let curve: (Float, Float) -> Float
 }

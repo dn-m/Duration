@@ -13,8 +13,10 @@ public struct Tempo {
     public let subdivision: Subdivision
     public let value: Float
     
+    /*
     public init(subdivision: Subdivision, value: Float) {
         self.subdivision = subdivision
         self.value = value
     }
+    */
 }
