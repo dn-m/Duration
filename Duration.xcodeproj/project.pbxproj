@@ -47,6 +47,20 @@
 		079980A91C9B3984006A55B8 /* MetricalDurationSpanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079980A71C9B3984006A55B8 /* MetricalDurationSpanning.swift */; };
 		079980AE1C9B45B2006A55B8 /* MetricalDurationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079980AD1C9B45B2006A55B8 /* MetricalDurationNode.swift */; };
 		079980AF1C9B45B2006A55B8 /* MetricalDurationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079980AD1C9B45B2006A55B8 /* MetricalDurationNode.swift */; };
+		07BD49101CB412F800E5D9C6 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD490F1CB412F800E5D9C6 /* Measure.swift */; };
+		07BD49111CB412F800E5D9C6 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD490F1CB412F800E5D9C6 /* Measure.swift */; };
+		07BD49131CB4152700E5D9C6 /* Tempo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD49121CB4152700E5D9C6 /* Tempo.swift */; };
+		07BD49141CB4152700E5D9C6 /* Tempo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD49121CB4152700E5D9C6 /* Tempo.swift */; };
+		07BD49161CB415BF00E5D9C6 /* TempoInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD49151CB415BF00E5D9C6 /* TempoInterpolation.swift */; };
+		07BD49171CB415BF00E5D9C6 /* TempoInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD49151CB415BF00E5D9C6 /* TempoInterpolation.swift */; };
+		07BD49191CB4171200E5D9C6 /* Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD49181CB4171200E5D9C6 /* Interpolation.swift */; };
+		07BD491A1CB4171200E5D9C6 /* Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD49181CB4171200E5D9C6 /* Interpolation.swift */; };
+		07BD491C1CB4179C00E5D9C6 /* TempoContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD491B1CB4179C00E5D9C6 /* TempoContext.swift */; };
+		07BD491D1CB4179C00E5D9C6 /* TempoContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD491B1CB4179C00E5D9C6 /* TempoContext.swift */; };
+		07BD491F1CB418A100E5D9C6 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD491E1CB418A100E5D9C6 /* Duration.swift */; };
+		07BD49201CB418A100E5D9C6 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD491E1CB418A100E5D9C6 /* Duration.swift */; };
+		07BD49221CB4193900E5D9C6 /* DurationInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD49211CB4193900E5D9C6 /* DurationInterval.swift */; };
+		07BD49231CB4193900E5D9C6 /* DurationInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD49211CB4193900E5D9C6 /* DurationInterval.swift */; };
 		07CC264F1C94DDF00099C21C /* IntervalTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA8E1C94DC8500EAFA61 /* IntervalTools.framework */; };
 		07CC26501C94DDF00099C21C /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA8F1C94DC8500EAFA61 /* ArrayTools.framework */; };
 		07CC26511C94DDF00099C21C /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA901C94DC8500EAFA61 /* ArithmeticTools.framework */; };
@@ -126,6 +140,13 @@
 		076CCBED1C9B5D0E007DC5F6 /* ElasticMetricalDurationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElasticMetricalDurationNode.swift; sourceTree = "<group>"; };
 		079980A71C9B3984006A55B8 /* MetricalDurationSpanning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricalDurationSpanning.swift; sourceTree = "<group>"; };
 		079980AD1C9B45B2006A55B8 /* MetricalDurationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricalDurationNode.swift; sourceTree = "<group>"; };
+		07BD490F1CB412F800E5D9C6 /* Measure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
+		07BD49121CB4152700E5D9C6 /* Tempo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tempo.swift; sourceTree = "<group>"; };
+		07BD49151CB415BF00E5D9C6 /* TempoInterpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempoInterpolation.swift; sourceTree = "<group>"; };
+		07BD49181CB4171200E5D9C6 /* Interpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpolation.swift; sourceTree = "<group>"; };
+		07BD491B1CB4179C00E5D9C6 /* TempoContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempoContext.swift; sourceTree = "<group>"; };
+		07BD491E1CB418A100E5D9C6 /* Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
+		07BD49211CB4193900E5D9C6 /* DurationInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurationInterval.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,15 +226,13 @@
 		071D19D31C94C93D00543F77 /* Duration */ = {
 			isa = PBXGroup;
 			children = (
-				071D1A1D1C94CB4C00543F77 /* Subdivision.swift */,
-				079980AD1C9B45B2006A55B8 /* MetricalDurationNode.swift */,
-				076CCBEA1C9B5CF5007DC5F6 /* RigidMetricalDurationNode.swift */,
-				076CCBED1C9B5D0E007DC5F6 /* ElasticMetricalDurationNode.swift */,
-				071D1A1E1C94CB4C00543F77 /* Beats.swift */,
-				071D1A1F1C94CB4C00543F77 /* MetricalDuration.swift */,
-				071D1A201C94CB4C00543F77 /* MetricalDurationInterval.swift */,
-				079980A71C9B3984006A55B8 /* MetricalDurationSpanning.swift */,
+				07BD49261CB41C9900E5D9C6 /* MetricalDuration */,
+				07BD49241CB41C5800E5D9C6 /* Tempo */,
 				071D19EB1C94C94400543F77 /* Supporting Files */,
+				07BD491E1CB418A100E5D9C6 /* Duration.swift */,
+				07BD49211CB4193900E5D9C6 /* DurationInterval.swift */,
+				07BD490F1CB412F800E5D9C6 /* Measure.swift */,
+				07BD49181CB4171200E5D9C6 /* Interpolation.swift */,
 			);
 			path = Duration;
 			sourceTree = "<group>";
@@ -221,10 +240,10 @@
 		071D19DF1C94C93D00543F77 /* DurationTests */ = {
 			isa = PBXGroup;
 			children = (
+				071D19EC1C94C94E00543F77 /* Supporting Files */,
 				071D1A291C94CBFB00543F77 /* SubdivisionTests.swift */,
 				071D1A2A1C94CBFB00543F77 /* MetricalDurationIntervalTests.swift */,
 				071D1A2C1C94CBFB00543F77 /* MetricalDurationTests.swift */,
-				071D19EC1C94C94E00543F77 /* Supporting Files */,
 			);
 			path = DurationTests;
 			sourceTree = "<group>";
@@ -278,6 +297,31 @@
 				073DBA961C94DC9B00EAFA61 /* ArithmeticTools.framework */,
 			);
 			name = Mac;
+			sourceTree = "<group>";
+		};
+		07BD49241CB41C5800E5D9C6 /* Tempo */ = {
+			isa = PBXGroup;
+			children = (
+				07BD49121CB4152700E5D9C6 /* Tempo.swift */,
+				07BD491B1CB4179C00E5D9C6 /* TempoContext.swift */,
+				07BD49151CB415BF00E5D9C6 /* TempoInterpolation.swift */,
+			);
+			name = Tempo;
+			sourceTree = "<group>";
+		};
+		07BD49261CB41C9900E5D9C6 /* MetricalDuration */ = {
+			isa = PBXGroup;
+			children = (
+				071D1A1F1C94CB4C00543F77 /* MetricalDuration.swift */,
+				071D1A1D1C94CB4C00543F77 /* Subdivision.swift */,
+				071D1A1E1C94CB4C00543F77 /* Beats.swift */,
+				079980AD1C9B45B2006A55B8 /* MetricalDurationNode.swift */,
+				076CCBEA1C9B5CF5007DC5F6 /* RigidMetricalDurationNode.swift */,
+				076CCBED1C9B5D0E007DC5F6 /* ElasticMetricalDurationNode.swift */,
+				071D1A201C94CB4C00543F77 /* MetricalDurationInterval.swift */,
+				079980A71C9B3984006A55B8 /* MetricalDurationSpanning.swift */,
+			);
+			name = MetricalDuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -499,14 +543,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07BD491C1CB4179C00E5D9C6 /* TempoContext.swift in Sources */,
 				071D1A251C94CB4C00543F77 /* MetricalDuration.swift in Sources */,
+				07BD49161CB415BF00E5D9C6 /* TempoInterpolation.swift in Sources */,
+				07BD49191CB4171200E5D9C6 /* Interpolation.swift in Sources */,
 				079980AE1C9B45B2006A55B8 /* MetricalDurationNode.swift in Sources */,
+				07BD49101CB412F800E5D9C6 /* Measure.swift in Sources */,
 				079980A81C9B3984006A55B8 /* MetricalDurationSpanning.swift in Sources */,
 				071D1A271C94CB4C00543F77 /* MetricalDurationInterval.swift in Sources */,
 				071D1A211C94CB4C00543F77 /* Subdivision.swift in Sources */,
 				076CCBEE1C9B5D0E007DC5F6 /* ElasticMetricalDurationNode.swift in Sources */,
 				076CCBEB1C9B5CF5007DC5F6 /* RigidMetricalDurationNode.swift in Sources */,
+				07BD491F1CB418A100E5D9C6 /* Duration.swift in Sources */,
 				071D1A231C94CB4C00543F77 /* Beats.swift in Sources */,
+				07BD49221CB4193900E5D9C6 /* DurationInterval.swift in Sources */,
+				07BD49131CB4152700E5D9C6 /* Tempo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,14 +575,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07BD491D1CB4179C00E5D9C6 /* TempoContext.swift in Sources */,
 				071D1A261C94CB4C00543F77 /* MetricalDuration.swift in Sources */,
+				07BD49171CB415BF00E5D9C6 /* TempoInterpolation.swift in Sources */,
+				07BD491A1CB4171200E5D9C6 /* Interpolation.swift in Sources */,
 				079980AF1C9B45B2006A55B8 /* MetricalDurationNode.swift in Sources */,
+				07BD49111CB412F800E5D9C6 /* Measure.swift in Sources */,
 				079980A91C9B3984006A55B8 /* MetricalDurationSpanning.swift in Sources */,
 				071D1A281C94CB4C00543F77 /* MetricalDurationInterval.swift in Sources */,
 				071D1A221C94CB4C00543F77 /* Subdivision.swift in Sources */,
 				076CCBEF1C9B5D0E007DC5F6 /* ElasticMetricalDurationNode.swift in Sources */,
 				076CCBEC1C9B5CF5007DC5F6 /* RigidMetricalDurationNode.swift in Sources */,
+				07BD49201CB418A100E5D9C6 /* Duration.swift in Sources */,
 				071D1A241C94CB4C00543F77 /* Beats.swift in Sources */,
+				07BD49231CB4193900E5D9C6 /* DurationInterval.swift in Sources */,
+				07BD49141CB4152700E5D9C6 /* Tempo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

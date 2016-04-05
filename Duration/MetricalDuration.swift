@@ -124,9 +124,14 @@ public struct MetricalDuration {
         self.init(Int(beatsAsFloat), subdivisionValue)!
     }
     
-    // TODO: init?(string)
-    
     // MARK: - Instance Methods
+    
+    /**
+     - warning: Not yet implemented!
+    */
+    public func duration(at tempo: Tempo) -> Duration {
+        return 0
+    }
     
     /**
     Get the most reduced, logically equivalent form of MetricalDuration.
@@ -249,8 +254,8 @@ public func areLevel(a: MetricalDuration, _ b: MetricalDuration) -> Bool {
 }
 
 /**
- Make `MetricalDuration` values that are logically equivalent to those given, represented in 
-    their mututally most reduced forms.
+ Make `MetricalDuration` values that are logically equivalent to those given, though 
+    represented in their mututally most reduced forms.
  
  - returns: MetricalDurations in mutually most reduced forms.
  */

@@ -49,36 +49,9 @@ public struct MetricalDurationInterval: Interval {
         self.stop = stop
         self.span = stop - start
     }
-    
-    /**
-     - returns: If `duration` is contained by `MetricalDurationInterval`.
-        Left- and right-closed.
-     */
-    public func contains(value: MetricalDuration) -> Bool {
-        return value > start && value < stop
-    }
 
     // MARK: Instance Methods
-    
-    /**    
-    - returns: `IntervalRelationship` with another `MetricalDurationInterval`
-    */
-    public func relationship(with interval: MetricalDurationInterval) -> IntervalRelationship {
-        if stop < interval.start { return .Precedes }
-        else if stop == interval.start { return .Meets }
-        else if start < interval.start && interval.contains(stop) { return .Overlaps }
-        else if stop == interval.stop && contains(interval.start) { return .FinishedBy }
-        else if contains(interval.start) && contains(interval.stop) { return .Contains }
-        else if start == interval.start && interval.contains(stop) { return .Starts }
-        else if start == interval.start && contains(interval.stop) { return .StartedBy }
-        else if interval.contains(start) && interval.contains(stop) { return .During }
-        else if stop == interval.stop && interval.contains(start) { return .Finishes }
-        else if stop > interval.stop && interval.contains(start) { return .OverlappedBy }
-        else if start == interval.stop { return .MetBy }
-        else if start > interval.stop { return .PrecededBy }
-        return .Equals
-    }
-    
+
     /**
      - returns: `MetricalDurationInterval` spanning from the least `start` value of the given 
         `MetricalDurationInterval` values, to the greatest `stop` value of the given
