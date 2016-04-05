@@ -7,8 +7,31 @@
 //
 
 import Foundation
+import IntervalTools
 
 public protocol MetricalDurationSpanning {
+
+    var metricalDurationInterval: MetricalDurationInterval { get }
     
-    var interval: MetricalDurationInterval { get }
+    static func elementsFrom<T: MetricalDurationSpanning>(array: [T],
+        withinInterval metricalDurationInterval: MetricalDurationInterval
+    ) -> [T]
+}
+
+extension MetricalDurationSpanning {
+    
+    public static func elementsFrom<T: MetricalDurationSpanning>(array: [T],
+        withinInterval metricalDurationInterval: MetricalDurationInterval
+    ) -> [T]
+    {
+        let allowedRelationships: IntervalRelationship = [
+            .Equals, .Contains, .Starts, .StartedBy, .Finishes, .FinishedBy
+        ]
+        
+        return array.filter {
+            allowedRelationships.contains(
+                metricalDurationInterval.relationship(with: $0.metricalDurationInterval)
+            )
+        }
+    }
 }

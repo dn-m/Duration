@@ -12,7 +12,7 @@ import Foundation
  `MetricalDurationNode` that infers its `MetricalDurationInterval` from the 
     `MetricalDurationInterval` values of its children.
  
-  - warning: Not yet implemented!
+ - warning: Not yet implemented!
  */
 public class ElasticMetricalDurationNode: MetricalDurationNode {
     

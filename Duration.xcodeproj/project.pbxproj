@@ -206,13 +206,13 @@
 			isa = PBXGroup;
 			children = (
 				071D1A1D1C94CB4C00543F77 /* Subdivision.swift */,
-				079980A71C9B3984006A55B8 /* MetricalDurationSpanning.swift */,
 				079980AD1C9B45B2006A55B8 /* MetricalDurationNode.swift */,
 				076CCBEA1C9B5CF5007DC5F6 /* RigidMetricalDurationNode.swift */,
 				076CCBED1C9B5D0E007DC5F6 /* ElasticMetricalDurationNode.swift */,
 				071D1A1E1C94CB4C00543F77 /* Beats.swift */,
 				071D1A1F1C94CB4C00543F77 /* MetricalDuration.swift */,
 				071D1A201C94CB4C00543F77 /* MetricalDurationInterval.swift */,
+				079980A71C9B3984006A55B8 /* MetricalDurationSpanning.swift */,
 				071D19EB1C94C94400543F77 /* Supporting Files */,
 			);
 			path = Duration;

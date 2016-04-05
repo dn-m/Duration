@@ -19,7 +19,7 @@ public class MetricalDurationNode: Node, MetricalDurationSpanning {
      
      `MetricalDurationInterval` of `MetricalDurationNode`.
      */
-    public var interval: MetricalDurationInterval = MetricalDurationInterval.zero
+    public var metricalDurationInterval = MetricalDurationInterval.zero
     
     public class func metricalDurationNode(with: MetricalDuration)
         -> RigidMetricalDurationNode?
