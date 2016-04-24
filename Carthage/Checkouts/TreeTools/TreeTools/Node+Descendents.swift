@@ -15,6 +15,9 @@ extension Node {
     func hasDescendent(node: Node) -> Bool {
         if isLeaf { return false }
         if hasChild(node) { return true }
-        return children.map { $0.hasChild(node) }.filter { $0 == true }.count > 0
+        return children
+            .map { $0.hasChild(node) }
+            .filter { $0 == true }
+            .count > 0
     }
 }

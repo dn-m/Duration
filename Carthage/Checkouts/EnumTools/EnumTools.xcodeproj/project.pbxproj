@@ -132,9 +132,9 @@
 		07994EFC1C7E3CFC00296896 /* EnumTools */ = {
 			isa = PBXGroup;
 			children = (
-				07994EFF1C7E3CFC00296896 /* Info.plist */,
 				07994F361C7E3DE300296896 /* Iterate.swift */,
 				07B08FC51C9B067300FD7A07 /* EnumTree.swift */,
+				07E3485E1CA458A70075F00C /* Supporting Files */,
 			);
 			path = EnumTools;
 			sourceTree = "<group>";
@@ -142,10 +142,26 @@
 		07994F081C7E3CFC00296896 /* EnumToolsTests */ = {
 			isa = PBXGroup;
 			children = (
-				07994F0B1C7E3CFC00296896 /* Info.plist */,
 				07994F391C7E3DFA00296896 /* IterateTests.swift */,
+				07E3485F1CA458B20075F00C /* Supporting Files */,
 			);
 			path = EnumToolsTests;
+			sourceTree = "<group>";
+		};
+		07E3485E1CA458A70075F00C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07994EFF1C7E3CFC00296896 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07E3485F1CA458B20075F00C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07994F0B1C7E3CFC00296896 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,7 +539,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -533,7 +549,7 @@
 				INFOPLIST_FILE = EnumTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.EnumToolsMac;
 				PRODUCT_NAME = EnumTools;
 				SDKROOT = macosx;
@@ -546,7 +562,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -556,7 +572,7 @@
 				INFOPLIST_FILE = EnumTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.EnumToolsMac;
 				PRODUCT_NAME = EnumTools;
 				SDKROOT = macosx;
@@ -568,7 +584,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = EnumToolsTests/Info.plist;
@@ -585,7 +601,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = EnumToolsTests/Info.plist;

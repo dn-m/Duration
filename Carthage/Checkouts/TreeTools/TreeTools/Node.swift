@@ -19,7 +19,7 @@ public class Node: Copyable {
     // MARK: - Instance Properties
 
     /// Parent Node
-    public var parent: Node?
+    public weak var parent: Node?
     
     /// Children Nodes
     public var children: [Node] = []

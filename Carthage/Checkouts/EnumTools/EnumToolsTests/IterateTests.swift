@@ -21,4 +21,11 @@ class IterateTests: XCTestCase {
         let expected: [TestEnum] = [.A, .B, .C, .D, .E, .F, .G]
         XCTAssertEqual(enumCollection, expected)
     }
+    
+    func testAllCases() {
+        
+        enum TestEnum: String { case A, B, C, D, E, F, G }
+        let expected: [TestEnum] = [.A, .B, .C, .D, .E, .F, .G]
+        XCTAssert(TestEnum.allCases == expected)
+    }
 }
