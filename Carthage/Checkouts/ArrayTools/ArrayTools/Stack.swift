@@ -9,7 +9,7 @@
 import Foundation
 
 /**
- Implementation of Stack structure
+ Implementation of Stack structure.
  */
 public struct Stack<Element: Equatable> {
     

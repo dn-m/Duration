@@ -167,7 +167,7 @@
 				078141E11C7CBDC6004B68D3 /* RemoveElements.swift */,
 				078141E21C7CBDC6004B68D3 /* ReplaceElements.swift */,
 				07994F871C7EA0A700296896 /* Stack.swift */,
-				078141A41C7CBCE4004B68D3 /* Info.plist */,
+				0783ECEB1CA59E8000E7F287 /* Supporting Files */,
 			);
 			path = ArrayTools;
 			sourceTree = "<group>";
@@ -179,9 +179,25 @@
 				07994E9F1C7E379900296896 /* RemoveElementsTests.swift */,
 				07994EA01C7E379900296896 /* ReplaceElementsTests.swift */,
 				07994F8A1C7EA10F00296896 /* StackTests.swift */,
-				078141B01C7CBCE5004B68D3 /* Info.plist */,
+				0783ECEC1CA59E9600E7F287 /* Supporting Files */,
 			);
 			path = ArrayToolsTests;
+			sourceTree = "<group>";
+		};
+		0783ECEB1CA59E8000E7F287 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				078141A41C7CBCE4004B68D3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0783ECEC1CA59E9600E7F287 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				078141B01C7CBCE5004B68D3 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -590,7 +606,7 @@
 				INFOPLIST_FILE = ArrayTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.ArrayToolsMac;
 				PRODUCT_NAME = ArrayTools;
 				SDKROOT = macosx;
@@ -614,7 +630,7 @@
 				INFOPLIST_FILE = ArrayTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.ArrayToolsMac;
 				PRODUCT_NAME = ArrayTools;
 				SDKROOT = macosx;

@@ -10,37 +10,31 @@ import Foundation
 
 extension Array where Element: Equatable {
     
-    // MARK: Where Element: Equatable
+    // MARK: - Element: Equatable
     
     /**
-    Get amount of a given `Element` in `Array`.
-    
-    >`[1,2,2,2,3,4,2].amountOf(2) -> 4`
-    
-    >`[1,2,3,4].amountOf(5) -> 0`
-    
-    - parameter element: `Element` for which to check amount.
-
-    - returns: Amount of `Element` in `Array`
+     `[1,2,2,2,3,4,2].amountOf(2) -> 4`
+     
+     `[1,2,3,4].amountOf(5) -> 0`
+     
+    - returns: Amount of given `Element` in `Array`.
     */
     public func amount(of element: Element) -> Int {
         
-        func amount(of element: Element, inArray array: [Element], accum: Int) -> Int {
+        func amount(of element: Element, in array: [Element], accum: Int) -> Int {
             var accum = accum
             guard let (head, tail) = array.destructured else { return accum }
             if head == element { accum += 1 }
-            return amount(of: element, inArray: tail, accum: accum)
+            return amount(of: element, in: tail, accum: accum)
         }
         
-        return amount(of: element, inArray: self, accum: 0)
+        return amount(of: element, in: self, accum: 0)
     }
     
     /**
     Extract all instances of `Element` in `Array`.
      
     >`[1,2,2,2,3,4].extractAllOf(2) -> ([2,2,2], [1,3,4])`
-
-    - parameter element: Element to extract
 
     - returns: 2-tuple of extracted elements, and leftovers
     */
@@ -65,42 +59,38 @@ extension Array where Element: Equatable {
     /**
     Sort the contents of `Array` with the order of contents in another `Array`.
      
-    >`["a","b","c","d].sortWithOrderOfContentsIn(["b","c","d"]) -> ["b","c","d","a"]`
+    >`["a","b","c","d].sort(withOrderOfContentsIn: ["b","c","d"]) -> ["b","c","d","a"]`
 
-    - parameter array: `Array` containing the desired order of `Elements`
-
-    - returns: `Array` of `Elements` sorted with the desired order
+    - returns: `Array` of `Elements` sorted with the desired order.
     */
-    public func sortWithOrderOfContentsIn(array: [Element]) -> [Element] {
+    public func sort(withOrderOfContentsIn array: [Element]) -> [Element] {
         
         func appendMatchesOf(element: Element,
-            fromArray array: [Element],
-            toArray result: [Element]
+            from array: [Element],
+            to result: [Element]
         ) -> ([Element],[Element])
         {
             let (leftovers, matches) = array.extractAll(element)
             return (result + matches, leftovers)
         }
         
-        func sortArray(array: [Element],
-            withOrderOfContentsInArray reference: [Element],
-            intoArray result: [Element]
+        func sort(array: [Element],
+            withOrderOfContentsIn reference: [Element],
+            into result: [Element]
         ) -> [Element]
         {
             guard let (head, tail) = reference.destructured else { return result + array }
-            let (sorted, source) = appendMatchesOf(head, fromArray: array, toArray: result)
-            return sortArray(source, withOrderOfContentsInArray: tail, intoArray: sorted)
+            let (sorted, source) = appendMatchesOf(head, from: array, to: result)
+            return sort(source, withOrderOfContentsIn: tail, into: sorted)
         }
         
-        return sortArray(self, withOrderOfContentsInArray: array, intoArray: [])
+        return sort(self, withOrderOfContentsIn: array, into: [])
     }
     
     /**
-    Create a 2-tuple containing duplicates extracted from `Array`, and the leftover `Elements`
-     
     >`[1,2,2,2,3,4,4].extractDuplicates() -> ([2,2,4],[1,2,3,4])`
 
-    - returns: (extracted duplicates, leftovers)
+    - returns: 2-tuple of (`extracted`, `leftovers`).
     */
     public func extractDuplicates() -> ([Element], [Element]) {
         
@@ -126,8 +116,7 @@ extension Array where Element: Equatable {
      */
     public var unique: [Element] {
         
-        func extractUniqueValues(from array: [Element], to result: [Element]) -> [Element]
-        {
+        func extractUniqueValues(from array: [Element], to result: [Element]) -> [Element] {
             guard let (head, tail) = array.destructured else { return result }
             let result = result.contains(head) ? result : result + head
             return extractUniqueValues(from: tail, to: result)
@@ -137,13 +126,11 @@ extension Array where Element: Equatable {
     }
     
     /**
-    Get index of `Element` in `Array`
+    Get index of `Element` in `Array`.
      
     >`["c","a","t","s"].indexOf("t") -> 2`
      
     >`["c","a","t","s"].indexOf("k") -> nil`
-
-    - parameter value: Value for index to be found
 
     - returns: Index of first instance of value, if present. Otherwise, `nil`.
     */
@@ -153,17 +140,15 @@ extension Array where Element: Equatable {
     }
     
     /**
-    Replace `Element` with new `Element`
+     Replace `element` with `newElement`.
      
-    >`["a","c","g","t"].replace("g", withElement: "b") -> ["a","c","b","t"]`
-
-    - parameter element:    `Element` to be replaced, if present in `Array`
-    - parameter newElement: New `Element` to replace given `Element`
-    */
-    public mutating func replace(element: Element, withElement newElement: Element) {
-        if let index = indexOf(element) {
-            removeAtIndex(index)
-            insert(element, atIndex: index)
-        }
+     >`["a","c","g","t"].replace("g", withElement: "b") -> ["a","c","b","t"]`
+     
+     - throws: `ArrayError.RemovalError` if given element not in `Array`.
+     */
+    public mutating func replace(element: Element, with newElement: Element) throws {
+        guard let index = indexOf(element) else { throw ArrayError.RemovalError }
+        removeAtIndex(index)
+        insert(element, atIndex: index)
     }
 }

@@ -10,25 +10,17 @@ import Foundation
 
 public extension Array where Element: AnyObject {
     
-    // MARK: - AnyObject
+    // MARK: - Element: AnyObject
     
     /**
-    Check if Array contains object
-    
-    - parameter object: Object for which to check status as member of Array
-    
-    - returns: If Array contains object
+    - returns: `true` if `Array` contains `object`. Otherwise `nil`.
     */
     func contains(object: Element) -> Bool {
         return index(ofObject: object) != nil
     }
     
     /**
-     Get index of first instance of given object in `Array`
-     
-     - parameter object: Object for index to be found
-     
-     - returns: Index of object, if present. Otherwise `nil`.
+     - returns: Index of first instance of `object`, if present. Otherwise `nil`.
      */
     func index(ofObject object: Element) -> Int? {
         for (index, el) in self.enumerate() { if el === object { return index } }
@@ -36,11 +28,12 @@ public extension Array where Element: AnyObject {
     }
     
     /**
-     Remove object from `Array`.
+     Remove `object` from `Array`.
      
-     - parameter object: Object to remove
+     - throws: `ArrayError` if `object` is not in `Array`.
      */
-    mutating func remove(of object: Element) {
-        if let i = index(ofObject: object) { removeAtIndex(i) }
+    mutating func remove(object: Element) throws {
+        guard let i = index(ofObject: object) else { throw ArrayError.RemovalError }
+        removeAtIndex(i)
     }
 }
