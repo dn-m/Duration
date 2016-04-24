@@ -8,15 +8,22 @@
 
 import Foundation
 
+/**
+ Tempo with a value and a Subdivision.
+ */
 public struct Tempo {
     
-    public let subdivision: Subdivision
+    /// Metronome marking of tempo in beats per minute.
     public let value: Float
     
-    /*
-    public init(subdivision: Subdivision, value: Float) {
+    /// Subdivision value of Tempo.
+    public let subdivision: Subdivision
+
+    /**
+     Create a Tempo.
+     */
+    public init(value: Float, subdivision: Subdivision = 8) {
         self.subdivision = subdivision
         self.value = value
     }
-    */
 }
