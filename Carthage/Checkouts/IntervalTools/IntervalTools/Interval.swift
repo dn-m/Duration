@@ -13,8 +13,12 @@ import Foundation
  */
 public protocol Interval: Equatable {
     
-    /// Type of value defining the `start`, `stop`, and `span` values
+    // MARK: - Associated Types
+    
+    /// Type of value defining the `start`, `stop`, and `span` values.
     associatedtype T: Comparable
+    
+    // MARK: - Instance Properties
     
     /// Start value.
     var start: T { get }
@@ -25,8 +29,12 @@ public protocol Interval: Equatable {
     /// Span between `start` and `stop` values.
     var span: T { get }
     
+    // MARK: - Initializers
+    
     /// Create an `Interval` with start and stop values
     init(_ start: T, _ stop: T)
+    
+    // MARK: - Instance Methods
     
     /**
      - returns: `true` if `value > start && value < stop`. Otherwise `false`.
