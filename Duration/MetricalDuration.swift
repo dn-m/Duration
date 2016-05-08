@@ -38,10 +38,10 @@ public struct MetricalDuration {
         andSubdivision subdivision: Subdivision
     ) -> Subdivision
     {
-        if beats <= 1 { return subdivision }
-        let limit = beats.isPowerOfTwo ? 1 : 2
+        if beats.value <= 1 { return subdivision }
+        let limit = beats.value.isPowerOfTwo ? 1 : 2
         var level = subdivision.level + 1
-        var amountBeats = closestPowerOfTwo(under: beats)!
+        var amountBeats = closestPowerOfTwo(under: beats.value)!
         while amountBeats >= limit {
             amountBeats /= 2
             level -= 1
@@ -65,11 +65,11 @@ public struct MetricalDuration {
     
     /// Float value
     public var floatValue: Float {
-        return (Float(beats) / Float(subdivision)) * scale
+        return (Float(beats.value) / Float(subdivision)) * scale
     }
     
     /// If `MetricalDuration` is represented in its most reduced form.
-    public var isReduced: Bool { return beats.isOdd }
+    public var isReduced: Bool { return beats.value.isOdd }
     
     // MARK: - Initializers
     
@@ -121,7 +121,7 @@ public struct MetricalDuration {
             beatsAsFloat *= 2
             subdivisionValue *= 2
         }
-        self.init(Int(beatsAsFloat), subdivisionValue)!
+        self.init(Beats(beatsAsFloat), subdivisionValue)!
     }
     
     // MARK: - Instance Methods
@@ -142,13 +142,13 @@ public struct MetricalDuration {
     */
     public func reduce() -> MetricalDuration {
         guard !self.isReduced else { return self }
-        var b = beats
+        var b = beats.value
         var s = subdivision
         while !b.isOdd {
             b /= 2
             s /= 2
         }
-        return MetricalDuration(b,s)!
+        return MetricalDuration(Beats(b),s)!
     }
     
     /**
@@ -238,11 +238,11 @@ public func leveled(a: MetricalDuration, _ b: MetricalDuration)
     -> (MetricalDuration, MetricalDuration)
 {
     guard !areLevel(a,b) else { return (a,b) }
-    let a_n = a.beats * b.subdivision
-    let b_n = b.beats * a.subdivision
+    let a_n = a.beats.value * b.subdivision
+    let b_n = b.beats.value * a.subdivision
     let d = b.subdivision * a.subdivision
-    let newA = MetricalDuration(a_n, d)!
-    let newB = MetricalDuration(b_n, d)!
+    let newA = MetricalDuration(Beats(a_n), d)!
+    let newB = MetricalDuration(Beats(b_n), d)!
     return (newA, newB)
 }
 
@@ -263,9 +263,9 @@ public func reduced(a: MetricalDuration, _ b: MetricalDuration)
     -> (MetricalDuration, MetricalDuration)
 {
     let (a,b) = leveled(a,b)
-    var a_n = a.beats
+    var a_n = a.beats.value
     var a_d = a.subdivision
-    var b_n = b.beats
+    var b_n = b.beats.value
     var b_d = b.subdivision
     while a_n.isEven && b_n.isEven {
         a_n /= 2
@@ -273,8 +273,8 @@ public func reduced(a: MetricalDuration, _ b: MetricalDuration)
         b_n /= 2
         b_d /= 2
     }
-    let newA = MetricalDuration(a_n, a_d)!
-    let newB = MetricalDuration(b_n, b_d)!
+    let newA = MetricalDuration(Beats(a_n), a_d)!
+    let newB = MetricalDuration(Beats(b_n), b_d)!
     return (newA, newB)
 }
 
@@ -283,7 +283,7 @@ public func reduced(a: MetricalDuration, _ b: MetricalDuration)
     Otherwise `false`.
  */
 public func areReduced(a: MetricalDuration, _ b: MetricalDuration) -> Bool {
-    return a.beats.isOdd || b.beats.isOdd
+    return a.beats.value.isOdd || b.beats.value.isOdd
 }
 
 // MARK: - CustomStringConvertible

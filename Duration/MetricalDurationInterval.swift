@@ -40,7 +40,7 @@ public struct MetricalDurationInterval: Interval {
         self.span = stop - start
     }
     
-    public init?(_ start: (Int, Int), _ stop: (Int, Int)) {
+    public init?(_ start: (Beats, Int), _ stop: (Beats, Int)) {
         guard let
             start = MetricalDuration(start.0, start.1),
             stop = MetricalDuration(stop.0, stop.1)
