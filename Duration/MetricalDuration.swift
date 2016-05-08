@@ -65,7 +65,7 @@ public struct MetricalDuration {
     
     /// Float value
     public var floatValue: Float {
-        return (Float(beats.value) / Float(subdivision)) * scale
+        return (Float(beats.value) / Float(subdivision.value)) * scale
     }
     
     /// If `MetricalDuration` is represented in its most reduced form.
@@ -143,7 +143,7 @@ public struct MetricalDuration {
     public func reduce() -> MetricalDuration {
         guard !self.isReduced else { return self }
         var b = beats.value
-        var s = subdivision
+        var s = subdivision.value
         while !b.isOdd {
             b /= 2
             s /= 2
@@ -215,7 +215,7 @@ public func < (lhs: MetricalDuration, rhs: MetricalDuration) -> Bool {
  */
 public func + (lhs: MetricalDuration, rhs: MetricalDuration) -> MetricalDuration {
     let (a,b) = reduced(lhs, rhs)
-    return MetricalDuration(a.beats + b.beats, a.subdivision)!
+    return MetricalDuration(a.beats + b.beats, a.subdivision.value)!
 }
 
 /**
@@ -225,7 +225,7 @@ public func + (lhs: MetricalDuration, rhs: MetricalDuration) -> MetricalDuration
  */
 public func - (lhs: MetricalDuration, rhs: MetricalDuration) -> MetricalDuration {
     let (a,b) = reduced(lhs, rhs)
-    return MetricalDuration(a.beats - b.beats, a.subdivision)!
+    return MetricalDuration(a.beats - b.beats, a.subdivision.value)!
 }
 
 /**
@@ -238,9 +238,9 @@ public func leveled(a: MetricalDuration, _ b: MetricalDuration)
     -> (MetricalDuration, MetricalDuration)
 {
     guard !areLevel(a,b) else { return (a,b) }
-    let a_n = a.beats.value * b.subdivision
-    let b_n = b.beats.value * a.subdivision
-    let d = b.subdivision * a.subdivision
+    let a_n = a.beats.value * b.subdivision.value
+    let b_n = b.beats.value * a.subdivision.value
+    let d = b.subdivision.value * a.subdivision.value
     let newA = MetricalDuration(Beats(a_n), d)!
     let newB = MetricalDuration(Beats(b_n), d)!
     return (newA, newB)
@@ -264,9 +264,9 @@ public func reduced(a: MetricalDuration, _ b: MetricalDuration)
 {
     let (a,b) = leveled(a,b)
     var a_n = a.beats.value
-    var a_d = a.subdivision
+    var a_d = a.subdivision.value
     var b_n = b.beats.value
-    var b_d = b.subdivision
+    var b_d = b.subdivision.value
     while a_n.isEven && b_n.isEven {
         a_n /= 2
         a_d /= 2

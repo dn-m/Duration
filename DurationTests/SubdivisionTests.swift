@@ -15,7 +15,7 @@ class SubdivisionTests: XCTestCase {
         let values = [(1,8),(2,16),(3,32),(4,64),(5,128),(6,256),(7,512)]
         values.forEach {
             XCTAssertEqual(Subdivision(level: $0.0).level, $0.0)
-            XCTAssertEqual(Subdivision(level: $0.0), $0.1)
+            XCTAssertEqual(Subdivision(level: $0.0), Subdivision($0.1))
         }
     }
     
@@ -31,7 +31,7 @@ class SubdivisionTests: XCTestCase {
         let values = [(1,8),(2,16),(3,32),(4,64),(5,128),(6,256),(7,512)]
         values.forEach {
             XCTAssertEqual(Subdivision(value: $0.1)!.level, $0.0)
-            XCTAssertEqual(Subdivision(value: $0.1)!, $0.1)
+            XCTAssertEqual(Subdivision(value: $0.1)!, Subdivision($0.1))
         }
     }
 }
