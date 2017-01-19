@@ -6,7 +6,7 @@
 //  Copyright © 2016 James Bean. All rights reserved.
 //
 
-import Foundation
+// Length of event in seconds.
+public typealias Duration = Double
 
-// Length of event in seconds
-public typealias Duration = Float
+// seconds, milliseconds, etc.
