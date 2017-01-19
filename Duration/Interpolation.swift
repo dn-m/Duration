@@ -14,6 +14,4 @@ public protocol Interpolation {
     
     var start: T { get }
     var stop: T { get }
-    
-    
 }
