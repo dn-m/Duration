@@ -27,18 +27,6 @@
 		071D1A301C94CBFB00543F77 /* MetricalDurationIntervalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D1A2A1C94CBFB00543F77 /* MetricalDurationIntervalTests.swift */; };
 		071D1A331C94CBFB00543F77 /* MetricalDurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D1A2C1C94CBFB00543F77 /* MetricalDurationTests.swift */; };
 		071D1A341C94CBFB00543F77 /* MetricalDurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D1A2C1C94CBFB00543F77 /* MetricalDurationTests.swift */; };
-		073DBA911C94DC8500EAFA61 /* IntervalTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA8E1C94DC8500EAFA61 /* IntervalTools.framework */; };
-		073DBA921C94DC8500EAFA61 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA8F1C94DC8500EAFA61 /* ArrayTools.framework */; };
-		073DBA931C94DC8500EAFA61 /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA901C94DC8500EAFA61 /* ArithmeticTools.framework */; };
-		073DBA971C94DC9B00EAFA61 /* IntervalTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA941C94DC9B00EAFA61 /* IntervalTools.framework */; };
-		073DBA981C94DC9B00EAFA61 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA951C94DC9B00EAFA61 /* ArrayTools.framework */; };
-		073DBA991C94DC9B00EAFA61 /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA961C94DC9B00EAFA61 /* ArithmeticTools.framework */; };
-		076CCBDB1C9B5431007DC5F6 /* TreeTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076CCBD81C9B5431007DC5F6 /* TreeTools.framework */; };
-		076CCBDC1C9B5431007DC5F6 /* EnumTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076CCBD91C9B5431007DC5F6 /* EnumTools.framework */; };
-		076CCBDD1C9B5431007DC5F6 /* DirectionTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076CCBDA1C9B5431007DC5F6 /* DirectionTools.framework */; };
-		076CCBE11C9B5449007DC5F6 /* TreeTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076CCBDE1C9B5449007DC5F6 /* TreeTools.framework */; };
-		076CCBE21C9B5449007DC5F6 /* EnumTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076CCBDF1C9B5449007DC5F6 /* EnumTools.framework */; };
-		076CCBE31C9B5449007DC5F6 /* DirectionTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076CCBE01C9B5449007DC5F6 /* DirectionTools.framework */; };
 		076CCBEB1C9B5CF5007DC5F6 /* RigidMetricalDurationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076CCBEA1C9B5CF5007DC5F6 /* RigidMetricalDurationNode.swift */; };
 		076CCBEC1C9B5CF5007DC5F6 /* RigidMetricalDurationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076CCBEA1C9B5CF5007DC5F6 /* RigidMetricalDurationNode.swift */; };
 		076CCBEE1C9B5D0E007DC5F6 /* ElasticMetricalDurationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076CCBED1C9B5D0E007DC5F6 /* ElasticMetricalDurationNode.swift */; };
@@ -61,12 +49,6 @@
 		07BD49201CB418A100E5D9C6 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD491E1CB418A100E5D9C6 /* Duration.swift */; };
 		07BD49221CB4193900E5D9C6 /* DurationInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD49211CB4193900E5D9C6 /* DurationInterval.swift */; };
 		07BD49231CB4193900E5D9C6 /* DurationInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD49211CB4193900E5D9C6 /* DurationInterval.swift */; };
-		07CC264F1C94DDF00099C21C /* IntervalTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA8E1C94DC8500EAFA61 /* IntervalTools.framework */; };
-		07CC26501C94DDF00099C21C /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA8F1C94DC8500EAFA61 /* ArrayTools.framework */; };
-		07CC26511C94DDF00099C21C /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA901C94DC8500EAFA61 /* ArithmeticTools.framework */; };
-		07CC26521C94DDF60099C21C /* IntervalTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA941C94DC9B00EAFA61 /* IntervalTools.framework */; };
-		07CC26531C94DDF60099C21C /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA951C94DC9B00EAFA61 /* ArrayTools.framework */; };
-		07CC26541C94DDF60099C21C /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073DBA961C94DC9B00EAFA61 /* ArithmeticTools.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,18 +106,6 @@
 		071D1A291C94CBFB00543F77 /* SubdivisionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubdivisionTests.swift; sourceTree = "<group>"; };
 		071D1A2A1C94CBFB00543F77 /* MetricalDurationIntervalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricalDurationIntervalTests.swift; sourceTree = "<group>"; };
 		071D1A2C1C94CBFB00543F77 /* MetricalDurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricalDurationTests.swift; sourceTree = "<group>"; };
-		073DBA8E1C94DC8500EAFA61 /* IntervalTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntervalTools.framework; path = Carthage/Build/iOS/IntervalTools.framework; sourceTree = "<group>"; };
-		073DBA8F1C94DC8500EAFA61 /* ArrayTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrayTools.framework; path = Carthage/Build/iOS/ArrayTools.framework; sourceTree = "<group>"; };
-		073DBA901C94DC8500EAFA61 /* ArithmeticTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArithmeticTools.framework; path = Carthage/Build/iOS/ArithmeticTools.framework; sourceTree = "<group>"; };
-		073DBA941C94DC9B00EAFA61 /* IntervalTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntervalTools.framework; path = Carthage/Build/Mac/IntervalTools.framework; sourceTree = "<group>"; };
-		073DBA951C94DC9B00EAFA61 /* ArrayTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrayTools.framework; path = Carthage/Build/Mac/ArrayTools.framework; sourceTree = "<group>"; };
-		073DBA961C94DC9B00EAFA61 /* ArithmeticTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArithmeticTools.framework; path = Carthage/Build/Mac/ArithmeticTools.framework; sourceTree = "<group>"; };
-		076CCBD81C9B5431007DC5F6 /* TreeTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TreeTools.framework; path = Carthage/Build/iOS/TreeTools.framework; sourceTree = "<group>"; };
-		076CCBD91C9B5431007DC5F6 /* EnumTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EnumTools.framework; path = Carthage/Build/iOS/EnumTools.framework; sourceTree = "<group>"; };
-		076CCBDA1C9B5431007DC5F6 /* DirectionTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DirectionTools.framework; path = Carthage/Build/iOS/DirectionTools.framework; sourceTree = "<group>"; };
-		076CCBDE1C9B5449007DC5F6 /* TreeTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TreeTools.framework; path = Carthage/Build/Mac/TreeTools.framework; sourceTree = "<group>"; };
-		076CCBDF1C9B5449007DC5F6 /* EnumTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EnumTools.framework; path = Carthage/Build/Mac/EnumTools.framework; sourceTree = "<group>"; };
-		076CCBE01C9B5449007DC5F6 /* DirectionTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DirectionTools.framework; path = Carthage/Build/Mac/DirectionTools.framework; sourceTree = "<group>"; };
 		076CCBEA1C9B5CF5007DC5F6 /* RigidMetricalDurationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RigidMetricalDurationNode.swift; sourceTree = "<group>"; };
 		076CCBED1C9B5D0E007DC5F6 /* ElasticMetricalDurationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElasticMetricalDurationNode.swift; sourceTree = "<group>"; };
 		079980A71C9B3984006A55B8 /* MetricalDurationSpanning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricalDurationSpanning.swift; sourceTree = "<group>"; };
@@ -154,12 +124,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				076CCBDB1C9B5431007DC5F6 /* TreeTools.framework in Frameworks */,
-				076CCBDC1C9B5431007DC5F6 /* EnumTools.framework in Frameworks */,
-				076CCBDD1C9B5431007DC5F6 /* DirectionTools.framework in Frameworks */,
-				073DBA911C94DC8500EAFA61 /* IntervalTools.framework in Frameworks */,
-				073DBA921C94DC8500EAFA61 /* ArrayTools.framework in Frameworks */,
-				073DBA931C94DC8500EAFA61 /* ArithmeticTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,10 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07CC26501C94DDF00099C21C /* ArrayTools.framework in Frameworks */,
-				07CC26511C94DDF00099C21C /* ArithmeticTools.framework in Frameworks */,
 				071D19DC1C94C93D00543F77 /* Duration.framework in Frameworks */,
-				07CC264F1C94DDF00099C21C /* IntervalTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,12 +139,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				076CCBE11C9B5449007DC5F6 /* TreeTools.framework in Frameworks */,
-				076CCBE21C9B5449007DC5F6 /* EnumTools.framework in Frameworks */,
-				076CCBE31C9B5449007DC5F6 /* DirectionTools.framework in Frameworks */,
-				073DBA971C94DC9B00EAFA61 /* IntervalTools.framework in Frameworks */,
-				073DBA981C94DC9B00EAFA61 /* ArrayTools.framework in Frameworks */,
-				073DBA991C94DC9B00EAFA61 /* ArithmeticTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,9 +146,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07CC26521C94DDF60099C21C /* IntervalTools.framework in Frameworks */,
-				07CC26531C94DDF60099C21C /* ArrayTools.framework in Frameworks */,
-				07CC26541C94DDF60099C21C /* ArithmeticTools.framework in Frameworks */,
 				071D19FC1C94C95F00543F77 /* Duration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,12 +228,6 @@
 		071D1A0F1C94CAFA00543F77 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				076CCBD81C9B5431007DC5F6 /* TreeTools.framework */,
-				076CCBD91C9B5431007DC5F6 /* EnumTools.framework */,
-				076CCBDA1C9B5431007DC5F6 /* DirectionTools.framework */,
-				073DBA8E1C94DC8500EAFA61 /* IntervalTools.framework */,
-				073DBA8F1C94DC8500EAFA61 /* ArrayTools.framework */,
-				073DBA901C94DC8500EAFA61 /* ArithmeticTools.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -289,12 +235,6 @@
 		071D1A101C94CAFD00543F77 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
-				076CCBDE1C9B5449007DC5F6 /* TreeTools.framework */,
-				076CCBDF1C9B5449007DC5F6 /* EnumTools.framework */,
-				076CCBE01C9B5449007DC5F6 /* DirectionTools.framework */,
-				073DBA941C94DC9B00EAFA61 /* IntervalTools.framework */,
-				073DBA951C94DC9B00EAFA61 /* ArrayTools.framework */,
-				073DBA961C94DC9B00EAFA61 /* ArithmeticTools.framework */,
 			);
 			name = Mac;
 			sourceTree = "<group>";
