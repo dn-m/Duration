@@ -7,57 +7,58 @@
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForAnalyzing = "YES"
             buildForTesting = "YES"
             buildForRunning = "YES"
             buildForProfiling = "YES"
-            buildForArchiving = "YES">
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "08BE6C54572E82680728B075"
+               BuildableName = "Duration.framework"
                BlueprintName = "Duration iOS"
-               ReferencedContainer = "container:Duration.xcodeproj"
-               BuildableName = "Duration iOS.framework">
+               ReferencedContainer = "container:Duration.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
-            buildForAnalyzing = "NO"
             buildForTesting = "YES"
             buildForRunning = "NO"
             buildForProfiling = "NO"
-            buildForArchiving = "NO">
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6C62A21E027F77E06E0F57BA'
-               BlueprintName = 'Duration iOS Tests'
-               ReferencedContainer = 'container:Duration.xcodeproj'
-               BuildableName = 'Duration iOS Tests.xctest'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6C62A21E027F77E06E0F57BA"
+               BuildableName = "Duration iOS Tests.xctest"
+               BlueprintName = "Duration iOS Tests"
+               ReferencedContainer = "container:Duration.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug"
       codeCoverageEnabled = "YES">
-      <AdditionalOptions>
-      </AdditionalOptions>
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6C62A21E027F77E06E0F57BA'
-               BlueprintName = 'Duration iOS Tests'
-               ReferencedContainer = 'container:Duration.xcodeproj'
-               BuildableName = 'Duration iOS Tests.xctest'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6C62A21E027F77E06E0F57BA"
+               BuildableName = "Duration iOS Tests.xctest"
+               BlueprintName = "Duration iOS Tests"
+               ReferencedContainer = "container:Duration.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -65,17 +66,25 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
-      buildConfiguration = "Debug"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "08BE6C54572E82680728B075"
+            BuildableName = "Duration.framework"
+            BlueprintName = "Duration iOS"
+            ReferencedContainer = "container:Duration.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      debugDocumentVersioning = "YES"
-      buildConfiguration = "Release"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      debugDocumentVersioning = "YES">
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

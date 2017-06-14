@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07C0B29D1EF1940A00C0334E /* Seconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0B29C1EF1940A00C0334E /* Seconds.swift */; };
+		07C0B29E1EF1940A00C0334E /* Seconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0B29C1EF1940A00C0334E /* Seconds.swift */; };
 		0AB7113B167639A95B374C5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FB7687936B11B2AFFC4D97 /* Foundation.framework */; };
 		2224022D2E1CEFBAE341E5BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FB7687936B11B2AFFC4D97 /* Foundation.framework */; };
 		31AB623F5BA502C6A8D3EFC6 /* Duration.h in Headers */ = {isa = PBXBuildFile; fileRef = F9E8376842E30A9654E09291 /* Duration.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,11 +35,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07C0B29C1EF1940A00C0334E /* Seconds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Seconds.swift; path = Duration/Seconds.swift; sourceTree = "<group>"; };
 		36528F43D78337235B372D60 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = DurationTests/Info.plist; sourceTree = "<group>"; };
 		64504AFA14EA84E44457C860 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = Duration/Info.plist; sourceTree = "<group>"; };
 		68FB7687936B11B2AFFC4D97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6AD5897B6E7298C4248A7FFE /* Duration iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Duration iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		74C1AC7B7B012A9A2E7EB0E5 /* Duration macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Duration macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AD5897B6E7298C4248A7FFE /* Duration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Duration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74C1AC7B7B012A9A2E7EB0E5 /* Duration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Duration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		864F2C09ADAB09D7EE9C1C75 /* Duration macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Duration macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A146207197944C21B394490D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		B4CA85D2E17CC664111180F1 /* Duration iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Duration iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,9 +138,9 @@
 		BF22161A86DB2027E9EA13F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6AD5897B6E7298C4248A7FFE /* Duration iOS.framework */,
+				6AD5897B6E7298C4248A7FFE /* Duration.framework */,
 				B4CA85D2E17CC664111180F1 /* Duration iOS Tests.xctest */,
-				74C1AC7B7B012A9A2E7EB0E5 /* Duration macOS.framework */,
+				74C1AC7B7B012A9A2E7EB0E5 /* Duration.framework */,
 				864F2C09ADAB09D7EE9C1C75 /* Duration macOS Tests.xctest */,
 			);
 			name = Products;
@@ -147,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				DC099962D81502A14A7315C7 /* Supporting Files */,
+				07C0B29C1EF1940A00C0334E /* Seconds.swift */,
 			);
 			name = Duration;
 			sourceTree = "<group>";
@@ -195,7 +199,7 @@
 			);
 			name = "Duration iOS";
 			productName = "Duration iOS";
-			productReference = 6AD5897B6E7298C4248A7FFE /* Duration iOS.framework */;
+			productReference = 6AD5897B6E7298C4248A7FFE /* Duration.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		23A118CA53F65602517DD46A /* Duration macOS */ = {
@@ -212,7 +216,7 @@
 			);
 			name = "Duration macOS";
 			productName = "Duration macOS";
-			productReference = 74C1AC7B7B012A9A2E7EB0E5 /* Duration macOS.framework */;
+			productReference = 74C1AC7B7B012A9A2E7EB0E5 /* Duration.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6C62A21E027F77E06E0F57BA /* Duration iOS Tests */ = {
@@ -257,6 +261,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					08BE6C54572E82680728B075 = {
+						LastSwiftMigration = 0830;
+					};
+					23A118CA53F65602517DD46A = {
+						LastSwiftMigration = 0830;
+					};
+				};
 			};
 			buildConfigurationList = 221C46A1FDBA0ABCAA11F77B /* Build configuration list for PBXProject "Duration" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -290,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07C0B29D1EF1940A00C0334E /* Seconds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07C0B29E1EF1940A00C0334E /* Seconds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -350,6 +365,7 @@
 				PRODUCT_NAME = Duration;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -359,6 +375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -380,6 +397,8 @@
 				PRODUCT_NAME = Duration;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -388,6 +407,7 @@
 		5B49E41451C88DDF10F6A1D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -485,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -503,6 +524,7 @@
 				PRODUCT_NAME = Duration;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -512,6 +534,7 @@
 		8E82C2B81ECD247AC60886BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -527,6 +550,7 @@
 		904CAA268A2BE0E3F41874A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -543,6 +567,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -561,6 +586,8 @@
 				PRODUCT_NAME = Duration;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -570,6 +597,7 @@
 		B4D2BD9B6AB9D1DBB875CA6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
