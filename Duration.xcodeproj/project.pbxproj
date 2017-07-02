@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		074A84171F09360A007C612B /* DurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A84161F09360A007C612B /* DurationTests.swift */; };
+		074A84181F09360A007C612B /* DurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A84161F09360A007C612B /* DurationTests.swift */; };
 		07C0B29D1EF1940A00C0334E /* Seconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0B29C1EF1940A00C0334E /* Seconds.swift */; };
 		07C0B29E1EF1940A00C0334E /* Seconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0B29C1EF1940A00C0334E /* Seconds.swift */; };
 		0AB7113B167639A95B374C5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FB7687936B11B2AFFC4D97 /* Foundation.framework */; };
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		074A84161F09360A007C612B /* DurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DurationTests.swift; path = DurationTests/DurationTests.swift; sourceTree = "<group>"; };
 		07C0B29C1EF1940A00C0334E /* Seconds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Seconds.swift; path = Duration/Seconds.swift; sourceTree = "<group>"; };
 		36528F43D78337235B372D60 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = DurationTests/Info.plist; sourceTree = "<group>"; };
 		64504AFA14EA84E44457C860 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = Duration/Info.plist; sourceTree = "<group>"; };
@@ -95,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				16342BF8CCA45872607709ED /* Supporting Files */,
+				074A84161F09360A007C612B /* DurationTests.swift */,
 			);
 			name = DurationTests;
 			sourceTree = "<group>";
@@ -268,6 +272,12 @@
 					23A118CA53F65602517DD46A = {
 						LastSwiftMigration = 0830;
 					};
+					6C62A21E027F77E06E0F57BA = {
+						LastSwiftMigration = 0830;
+					};
+					DB330B21EE693926E00161A4 = {
+						LastSwiftMigration = 0830;
+					};
 				};
 			};
 			buildConfigurationList = 221C46A1FDBA0ABCAA11F77B /* Build configuration list for PBXProject "Duration" */;
@@ -295,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				074A84171F09360A007C612B /* DurationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				074A84181F09360A007C612B /* DurationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,15 +420,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = DurationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -535,15 +550,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = DurationTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -551,15 +569,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = DurationTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -598,15 +620,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = DurationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
